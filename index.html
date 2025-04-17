@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan Under Siege</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <style>
+    .gradient-border {
+      border-image: linear-gradient(to right, #10b981, #059669) 1;
+    }
+    .custom-card {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+    }
+  </style>
+  <!-- Tailwind CSS via official CDN script for development (fallback for local preview) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-serif antialiased">
+  <div style="position:fixed;top:0;left:0;z-index:9999;background:red;color:white;font-weight:bold;padding:4px 8px;">CASCADE_MARKER_12345</div>
+  <header class="bg-white border-b border-green-600 shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
+      <div class="flex items-center justify-between">
+        <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
+        <nav class="space-x-2 md:space-x-4 flex items-center">
+          <a href="./index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a>
+          <a href="./about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a>
+          <a href="doctrine.html" class="text-green-700 font-bold px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan Doctrine</a>
+          <a href="./regions/balochistan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Balochistan</a>
+          <a href="./regions/sindh.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Sindh</a>
+          <a href="./regions/kp.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">KP</a>
+          <a href="./regions/gb.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">GB</a>
+          <a href="./regions/punjab.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Punjab</a>
+          <a href="./reports/index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-green-700 mb-4 tracking-tight drop-shadow">Pakistan Under Siege</h1>
+      <p class="text-2xl text-gray-700 max-w-2xl mx-auto mb-6">
+        Pakistan is in the grip of a silent war. Since 2022, the military and intelligence agencies—ISI, MI, and their proxies—have waged a campaign of abductions, torture, and censorship across Balochistan, Sindh, KP, Gilgit-Baltistan, and Punjab. Thousands have vanished. Journalists are threatened, activists are killed, and entire regions are under siege. This site is a living archive of state violence and the cost of speaking out.
+      </p>
+      <div class="flex justify-center gap-4 mt-6">
+        <a href="#regions" class="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-full shadow hover:bg-green-700 transition">Explore Regions</a>
+        <a href="#featured-reports" class="inline-block px-6 py-3 bg-white border border-green-600 text-green-700 font-semibold rounded-full shadow hover:bg-green-50 transition">View Reports</a>
+      </div>
+    </div>
+    <section id="regions" class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8 tracking-wide">Regions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="regions/balochistan.html" class="group block bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl hover:border-green-600 transition-all duration-200 p-6">
+          <h3 class="text-2xl font-bold text-green-700 group-hover:text-green-800 mb-2">Balochistan</h3>
+          <p class="text-gray-600 mb-3">Documentation of human rights violations in Balochistan</p>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">150+ Cases</span>
+        </a>
+        <a href="regions/sindh.html" class="group block bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl hover:border-green-600 transition-all duration-200 p-6">
+          <h3 class="text-2xl font-bold text-green-700 group-hover:text-green-800 mb-2">Sindh</h3>
+          <p class="text-gray-600 mb-3">Documentation of human rights violations in Sindh</p>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">125+ Cases</span>
+        </a>
+        <a href="regions/kp.html" class="group block bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl hover:border-green-600 transition-all duration-200 p-6">
+          <h3 class="text-2xl font-bold text-green-700 group-hover:text-green-800 mb-2">KP</h3>
+          <p class="text-gray-600 mb-3">Documentation of human rights violations in KP</p>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">180+ Cases</span>
+        </a>
+        <a href="regions/gb.html" class="group block bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl hover:border-green-600 transition-all duration-200 p-6">
+          <h3 class="text-2xl font-bold text-green-700 group-hover:text-green-800 mb-2">GB</h3>
+          <p class="text-gray-600 mb-3">Documentation of human rights violations in GB</p>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">110+ Cases</span>
+        </a>
+        <a href="regions/punjab.html" class="group block bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl hover:border-green-600 transition-all duration-200 p-6">
+          <h3 class="text-2xl font-bold text-green-700 group-hover:text-green-800 mb-2">Punjab</h3>
+          <p class="text-gray-600 mb-3">Documentation of human rights violations in Punjab</p>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">210+ Cases</span>
+        </a>
+      </div>
+    </section>
+    <section id="featured-reports" class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8 tracking-wide">Featured Reports & Events</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
+          <h3 class="text-2xl font-bold text-green-700 mb-2">May 9th, 2023: The Crackdown</h3>
+          <p class="text-gray-700">Following protests against military courts, over 5,000 people—including women, students, and lawyers—were detained across Punjab. Journalists reporting on the events were threatened and forced off air. The ISI and police raided homes in Lahore and Rawalpindi. Many remain missing.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
+          <h3 class="text-2xl font-bold text-green-700 mb-2">Khuzdar Mass Graves, Balochistan</h3>
+          <p class="text-gray-700">In January 2014, mass graves containing the remains of dozens of missing persons were discovered in Khuzdar. Families and activists accuse security forces of extrajudicial killings. Investigations were blocked, and no one was held accountable.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
+          <h3 class="text-2xl font-bold text-green-700 mb-2">2024 Wheat Protests, Gilgit-Baltistan</h3>
+          <p class="text-gray-700">In January 2024, thousands protested wheat shortages and government neglect. The military responded with arrests and violence. Activists and journalists covering the protests were detained or disappeared.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
+          <h3 class="text-2xl font-bold text-green-700 mb-2">Jan Muhammad Mahar Assassinated, Sindh</h3>
+          <p class="text-gray-700">In August 2023, prominent journalist Jan Muhammad Mahar was shot dead in Sukkur. His reporting on enforced disappearances and police abuses made him a target. The killers remain at large.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
+          <h3 class="text-2xl font-bold text-green-700 mb-2">PTM Crackdown, KP</h3>
+          <p class="text-gray-700">Leaders of the Pashtun Tahafuz Movement (PTM) have been jailed, attacked, or forced into hiding. Rallies in Waziristan and Swat are met with violence. Media coverage is banned, and activists live in constant fear of abduction.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Interactive Map Section -->
+    <section class="my-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">Interactive Map: Human Rights & Crisis Hotspots</h2>
+      <div id="map" class="w-full h-96 rounded-xl border border-gray-200 shadow" style="min-height:400px;min-width:320px;"></div>
+      <div class="text-sm text-gray-500 text-center mt-2">
+        Map data: <a href="https://www.openstreetmap.org/" class="text-green-700 underline hover:text-green-500" target="_blank">OpenStreetMap</a>. Regional stats: see <a href="#data-sources" class="text-green-700 underline hover:text-green-500">sources</a> below.
+      </div>
+    </section>
+    <!-- Infographics Section -->
+    <section class="my-16">
+      <h2 class="text-4xl font-bold text-green-700 mb-8 text-center">Infographics: The Crisis in Numbers</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Enforced Disappearances Over Time</h3>
+          <canvas id="disappearancesChart" width="400" height="300"></canvas>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Brain Drain: Skilled Migration</h3>
+          <canvas id="migrationChart" width="400" height="300"></canvas>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Terrorism & Fatalities</h3>
+          <canvas id="terrorismChart" width="400" height="300"></canvas>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Protest Crackdowns & Arrests</h3>
+          <canvas id="protestsChart" width="400" height="300"></canvas>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Media Censorship & Journalist Killings</h3>
+          <canvas id="mediaChart" width="400" height="300"></canvas>
+        </div>
+      </div>
+    </section>
+    <!-- Advocacy Narrative & Calls to Action -->
+    <section class="my-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">Pakistan Under Siege: The Human Cost</h2>
+      <div class="max-w-3xl mx-auto text-lg text-gray-800 leading-relaxed">
+        <p class="mb-6">Pakistan’s ongoing crisis is not just a matter of numbers—it is a story of families torn apart, communities living in fear, and a nation’s brightest minds forced to flee. Behind every data point is a human life: a student abducted, a journalist silenced, a protester jailed, a family struggling to survive economic collapse. <span class="font-semibold text-green-700">These are not isolated incidents—they are the result of systemic repression, elite capture, and the unchecked power of the military establishment.</span></p>
+        <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-6">“They took my brother in the night. We still don’t know where he is. Every day, we wait for news, but none comes.”<br><span class="text-sm text-gray-500">— Sister of an enforced disappearance victim, Balochistan</span></blockquote>
+        <p class="mb-4">The statistics and maps above are a call to action. <span class="font-semibold text-green-700">We must demand accountability, amplify the voices of the disappeared and displaced, and support independent journalism and civil society.</span></p>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Share these infographics and stories on social media to raise awareness.</li>
+          <li>Support organizations defending human rights and press freedom in Pakistan.</li>
+          <li>Contact your representatives and urge them to speak out against repression and abuses.</li>
+        </ul>
+        <div class="bg-green-50 border-l-4 border-green-700 p-4 rounded mb-4">
+          <strong>Take Action:</strong> <a href="https://hrcp-web.org/hrcpweb/" class="text-green-700 underline hover:text-green-500" target="_blank">Support the Human Rights Commission of Pakistan (HRCP)</a> | <a href="https://rsf.org/en/country/pakistan" class="text-green-700 underline hover:text-green-500" target="_blank">Support Press Freedom</a>
+        </div>
+      </div>
+    </section>
+    <!-- Multimedia & Downloadable Reports Section -->
+    <section class="my-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">Stories & Reports: Hear and Read More</h2>
+      <div class="max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-start">
+        <div class="flex-1 bg-white rounded-xl border border-gray-200 shadow p-6 flex flex-col items-center">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Survivor Testimony</h3>
+          <blockquote class="italic text-gray-700 border-l-4 border-green-700 pl-4 mb-3">“They took my brother in the night. We still don’t know where he is. Every day, we wait for news, but none comes.”<br><span class="text-sm text-gray-500">— Sister of an enforced disappearance victim, Balochistan</span></blockquote>
+          <a href="assets/survivor_quote_1.txt" class="text-green-700 underline hover:text-green-500 text-sm" download>Download Testimony (txt)</a>
+          <video controls class="mt-4 w-full rounded shadow" style="max-width:320px;">
+            <source src="assets/video_survivor_story.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="text-xs text-gray-500 mt-1">Video: Survivor testimony (subtitled, anonymized)</div>
+        </div>
+        <div class="flex-1 bg-white rounded-xl border border-gray-200 shadow p-6 flex flex-col items-center">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Featured Report</h3>
+          <p class="mb-2 text-gray-700">Read our in-depth report on Pakistan’s brain drain and the exodus of skilled workers.</p>
+          <a href="assets/report_brain_drain.pdf" class="text-green-700 underline hover:text-green-500 text-sm" download>Download Report (PDF)</a>
+        </div>
+      </div>
+    </section>
+    <!-- Data Sources Section -->
+    <section class="my-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">Data Sources & References</h2>
+      <div class="max-w-3xl mx-auto text-lg text-gray-700">
+        <ul class="list-disc list-inside space-y-2">
+          <li><a href="https://hrcp-web.org/hrcpweb/" class="text-green-700 underline hover:text-green-500" target="_blank">Human Rights Commission of Pakistan (HRCP)</a> — disappearances, enforced disappearances, state violence</li>
+          <li><a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/pakistan/" class="text-green-700 underline hover:text-green-500" target="_blank">Amnesty International</a> — protests, arbitrary arrests, rights abuses</li>
+          <li><a href="https://www.dawn.com/" class="text-green-700 underline hover:text-green-500" target="_blank">Dawn News</a> — news, economic data, migration, protests</li>
+          <li><a href="https://tribune.com.pk/" class="text-green-700 underline hover:text-green-500" target="_blank">The Express Tribune</a> — migration, protests, terrorism, economy</li>
+          <li><a href="https://www.satp.org/terrorism-assessment/pakistan" class="text-green-700 underline hover:text-green-500" target="_blank">South Asia Terrorism Portal (SATP)</a> — terrorism incidents, fatalities</li>
+          <li><a href="https://rsf.org/en/country/pakistan" class="text-green-700 underline hover:text-green-500" target="_blank">Reporters Without Borders (RSF)</a> — media censorship, journalist killings</li>
+          <li><a href="https://cpj.org/asia/pakistan/" class="text-green-700 underline hover:text-green-500" target="_blank">Committee to Protect Journalists (CPJ)</a> — journalist killings, censorship</li>
+          <li><a href="https://www.worldbank.org/en/country/pakistan/overview" class="text-green-700 underline hover:text-green-500" target="_blank">World Bank</a> — economic indicators, poverty, debt</li>
+          <li><a href="https://www.imf.org/en/Countries/PAK" class="text-green-700 underline hover:text-green-500" target="_blank">IMF</a> — economic indicators, debt</li>
+          <li><a href="https://www.iom.int/countries/pakistan" class="text-green-700 underline hover:text-green-500" target="_blank">International Organization for Migration (IOM)</a> — migration/brain drain</li>
+        </ul>
+        <p class="mt-6 text-gray-500 text-base">Each infographic and dataset on this website is sourced from reputable organizations, news media, and international agencies. Please see the <code>data/</code> directory for JSON files and in-chart links for direct sources.</p>
+      </div>
+    </section>
+    <section class="w-full mb-10">
+      <h3 class="text-xl font-bold font-sans text-green-700 mb-6 uppercase tracking-wider">Search the Archive</h3>
+      <input id="searchBox" class="w-full p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition" placeholder="Search events, incidents, reports...">
+      <div id="searchResults" class="mt-6"></div>
+    </section>
+  </main>
+  <footer class="text-center py-8 border-t-4 border-green-600 bg-white text-base text-gray-500 font-serif shadow-lg mt-16">
+    <span class="block text-green-700 font-bold font-sans text-xl">&copy; 2025 Pakistan Under Siege</span>
+    <span class="block mt-1 text-gray-500">All rights reserved.</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/infographics.js"></script>
+  <!-- Leaflet.js CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/map.js"></script>
+</body>
+</html>

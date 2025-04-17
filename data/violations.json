@@ -1,0 +1,135 @@
+{
+  "regions": {
+    "balochistan": {
+      "name": "Balochistan",
+      "total_cases": 150,
+      "cases": [
+        {
+          "id": 1,
+          "date": "2023-02-15",
+          "title": "Enforced Disappearances in Turbat",
+          "summary": "Multiple cases of enforced disappearances reported in Turbat district. At least 12 individuals reported missing after being detained by security forces.",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://hrcp.org.pk/reports/2023-turbat",
+            "https://hrw.org/news/2023/02/15/balochistan-disappearances"
+          ]
+        },
+        {
+          "id": 2,
+          "date": "2023-04-20",
+          "title": "Extrajudicial Killings in Gwadar",
+          "summary": "Three civilians killed in police operation in Gwadar. Eyewitnesses report lack of proper investigation.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://amnesty.org/en/latest/news/2023/04/gwadar-killing/"
+          ]
+        }
+      ]
+    },
+    "sindh": {
+      "name": "Sindh",
+      "total_cases": 85,
+      "cases": [
+        {
+          "id": 3,
+          "date": "2023-06-10",
+          "title": "Crackdown on Protesters in Karachi",
+          "summary": "Security forces detained 45 protesters during peaceful demonstration against electricity shortages. Multiple injuries reported.",
+          "category": "Freedom of Assembly",
+          "sources": [
+            "https://amnesty.org/en/latest/news/2023/06/karachi-protest-crackdown/"
+          ]
+        },
+        {
+          "id": 4,
+          "date": "2023-07-15",
+          "title": "Police Brutality in Hyderabad",
+          "summary": "Two civilians killed during police operation. Local human rights groups report excessive use of force.",
+          "category": "Excessive Force",
+          "sources": [
+            "https://hrw.org/news/2023/07/15/hyderabad-brutality"
+          ]
+        }
+      ]
+    },
+    "kp": {
+      "name": "Khyber Pakhtunkhwa",
+      "total_cases": 65,
+      "cases": [
+        {
+          "id": 5,
+          "date": "2023-03-25",
+          "title": "Arbitrary Detentions in Peshawar",
+          "summary": "Over 50 individuals detained without charge during security operation. Human rights groups raise concerns about due process violations.",
+          "category": "Arbitrary Detention",
+          "sources": [
+            "https://hrcp.org.pk/reports/2023-peshawar"
+          ]
+        },
+        {
+          "id": 6,
+          "date": "2023-05-10",
+          "title": "Torture in Police Custody",
+          "summary": "Multiple reports of torture in police custody. Human rights organizations document severe physical abuse.",
+          "category": "Torture",
+          "sources": [
+            "https://amnesty.org/en/latest/news/2023/05/kp-torture-reports/"
+          ]
+        }
+      ]
+    },
+    "gb": {
+      "name": "Gilgit-Baltistan",
+      "total_cases": 35,
+      "cases": [
+        {
+          "id": 7,
+          "date": "2023-04-05",
+          "title": "Freedom of Expression Restrictions",
+          "summary": "Multiple journalists and activists detained for social media posts. Reports of internet shutdowns during protests.",
+          "category": "Freedom of Expression",
+          "sources": [
+            "https://hrw.org/news/2023/04/05/gb-expression-restrictions"
+          ]
+        },
+        {
+          "id": 8,
+          "date": "2023-06-28",
+          "title": "Forced Displacement in Skardu",
+          "summary": "Hundreds of families forcibly displaced due to military operations. Reports of property destruction.",
+          "category": "Forced Displacement",
+          "sources": [
+            "https://hrcp.org.pk/reports/2023-skardu"
+          ]
+        }
+      ]
+    },
+    "punjab": {
+      "name": "Punjab",
+      "total_cases": 120,
+      "cases": [
+        {
+          "id": 9,
+          "date": "2023-01-15",
+          "title": "Extrajudicial Killings in Lahore",
+          "summary": "Four civilians killed in police encounter. Human rights groups question the circumstances of the killings.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://amnesty.org/en/latest/news/2023/01/lahore-encounter/"
+          ]
+        },
+        {
+          "id": 10,
+          "date": "2023-03-01",
+          "title": "Freedom of Religion Restrictions",
+          "summary": "Multiple religious minorities detained under blasphemy laws. Reports of harassment and intimidation.",
+          "category": "Freedom of Religion",
+          "sources": [
+            "https://hrw.org/news/2023/03/01/punjab-religious-freedom"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "journalists_killed": [4, 3, 2, 5, 7, 9, 8],
+  "censorship_cases": [15, 19, 22, 30, 40, 56, 61],
+  "sources": [
+    "https://rsf.org/en/country/pakistan",
+    "https://cpj.org/asia/pakistan/"
+  ]
+}
