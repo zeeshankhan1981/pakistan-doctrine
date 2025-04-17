@@ -130,6 +130,23 @@
           ]
         }
       ]
+    },
+    "islamabad": {
+      "name": "Islamabad",
+      "total_cases": 1,
+      "cases": [
+        {
+          "id": 1001,
+          "date": "2024-11-26",
+          "title": "Deadly Crackdown on PTI Protesters",
+          "summary": "Multiple deaths and mass detentions during protests by Pakistan Tehreek-e-Insaf (PTI) in Islamabad. Security forces reportedly used lethal and less-lethal force, enforced a communication blackout, and arrested over 600 protesters. At least six deaths, including four security officers, were reported.",
+          "category": "Freedom of Assembly / Unlawful Use of Force",
+          "sources": [
+            "https://www.amnesty.org/en/latest/news/2024/11/urgent-and-transparent-investigation-needed-into-deadly-crackdown-on-opposition-protesters/",
+            "https://www.bbc.com/news/articles/cg7gklm0r04o"
+          ]
+        }
+      ]
     }
   }
 }

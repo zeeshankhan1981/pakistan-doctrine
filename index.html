@@ -141,25 +141,25 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
           <h3 class="text-2xl font-bold text-green-700 mb-4">Enforced Disappearances Over Time</h3>
-          <canvas id="disappearancesChart" width="400" height="300"></canvas>
+          <canvas id="disappearancesChart" width="400" height="220" aria-label="Line chart showing enforced disappearances by year" role="img"></canvas>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
-          <h3 class="text-2xl font-bold text-green-700 mb-4">Brain Drain: Skilled Migration</h3>
-          <canvas id="migrationChart" width="400" height="300"></canvas>
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Skilled Migration Over Time</h3>
+          <canvas id="migrationChart" width="400" height="220" aria-label="Bar chart showing skilled migration by year" role="img"></canvas>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
-          <h3 class="text-2xl font-bold text-green-700 mb-4">Terrorism & Fatalities</h3>
-          <canvas id="terrorismChart" width="400" height="300"></canvas>
+          <h3 class="text-2xl font-bold text-green-700 mb-4">Arrests by Year</h3>
+          <canvas id="arrestsChart" width="400" height="220" aria-label="Bar chart showing arrests by year" role="img"></canvas>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
         <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
           <h3 class="text-2xl font-bold text-green-700 mb-4">Protest Crackdowns & Arrests</h3>
-          <canvas id="protestsChart" width="400" height="300"></canvas>
+          <canvas id="protestsChart" width="400" height="220" aria-label="Bar chart showing protest crackdowns and arrests" role="img"></canvas>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center">
           <h3 class="text-2xl font-bold text-green-700 mb-4">Media Censorship & Journalist Killings</h3>
-          <canvas id="mediaChart" width="400" height="300"></canvas>
+          <canvas id="mediaChart" width="400" height="220" aria-label="Bar chart showing media censorship and journalist killings" role="img"></canvas>
         </div>
       </div>
     </section>
@@ -222,7 +222,21 @@
     </section>
     <section class="w-full mb-10">
       <h3 class="text-xl font-bold font-sans text-green-700 mb-6 uppercase tracking-wider">Search the Archive</h3>
-      <input id="searchBox" class="w-full p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition" placeholder="Search events, incidents, reports...">
+      <div class="flex flex-col md:flex-row gap-4 mb-4">
+        <input id="searchBox" class="flex-1 p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition" placeholder="Search events, incidents, reports...">
+        <select id="filterRegion" class="p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition">
+          <option value="">All Regions</option>
+        </select>
+        <select id="filterYear" class="p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition">
+          <option value="">All Years</option>
+        </select>
+        <select id="filterCategory" class="p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition">
+          <option value="">All Categories</option>
+        </select>
+        <select id="filterSource" class="p-4 rounded-lg bg-gray-100 text-gray-700 font-serif text-lg border-2 border-green-300 focus:outline-none focus:border-green-600 transition">
+          <option value="">All Sources</option>
+        </select>
+      </div>
       <div id="searchResults" class="mt-6"></div>
     </section>
   </main>

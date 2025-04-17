@@ -61,85 +61,34 @@
 
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
     <div class="text-center mb-16">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-green-700 mb-4 tracking-tight">Gilgit-Baltistan (GB)</h1>
+      <h1 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight">Gilgit-Baltistan: Silenced Voices</h1>
       <p class="text-2xl text-gray-700 max-w-2xl mx-auto mb-6">
-        Gilgit-Baltistan is under military control, its resources exploited and its people silenced. Protests are met with force, and activists are detained or disappeared. The 2024 wheat protests saw a brutal crackdown. The struggle for autonomy and dignity continues in the shadow of the mountains.
+        Gilgit-Baltistan (GB) has seen a rise in restrictions on freedom of expression and forced displacement. In 2024, at least 35 cases of rights violations were reported, with journalists and activists facing detention and internet shutdowns. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="underline text-green-700" target="_blank">HRW</a>
       </p>
-      <div class="flex justify-center gap-4 mt-6">
-        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-700 border border-green-700">
-          35+ Documented Cases
-        </span>
-      </div>
     </div>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Human Rights Under Siege</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
-        <p class="text-lg text-gray-700">
-          - Resource extraction with no local benefit<br>
-          - Crackdown on protests over land, water, and wheat<br>
-          - Detention and disappearance of activists<br>
-          - Censorship and surveillance of journalists<br>
-          - Military rule overrides civilian voices<br>
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Events</h2>
-      <div class="space-y-6" id="timelineContainer"></div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Cases</h2>
-      <div id="casesContainer"></div>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
-      <div id="categoryBreakdown"></div>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Sources</h2>
-      <div id="sourcesContainer"></div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Incidents</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for incident in keyIncidents %}
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-          <h3 class="text-xl font-semibold text-green-700 mb-2">{{incident.title}}</h3>
-          <p class="text-gray-700">{{incident.description}}</p>
-          <div class="mt-4">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 border border-green-700">
-              {{incident.caseCount}}+ Cases
-            </span>
-          </div>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Incidents (2023–2024)</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Freedom of Expression Restrictions</h3>
+          <p class="text-gray-700 mb-2">On 5 April 2023, multiple journalists and activists were detained for social media posts. Reports of internet shutdowns during protests. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="underline text-green-700" target="_blank">HRW</a></p>
         </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for report in reports %}
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-          <h3 class="text-xl font-semibold text-green-700 mb-2">{{report.title}}</h3>
-          <p class="text-gray-700">{{report.description}}</p>
-          <a href="{{report.url}}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 mt-2">
-            Download Report
-          </a>
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Forced Displacement in Skardu</h3>
+          <p class="text-gray-700 mb-2">On 28 June 2023, hundreds of families were forcibly displaced due to military operations. Reports of property destruction. <a href="https://hrcp.org.pk/reports/2023-skardu" class="underline text-green-700" target="_blank">HRCP</a></p>
         </div>
-        {% endfor %}
       </div>
     </section>
-
-    <section class="mb-12">
-      <blockquote class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-        <p class="text-gray-700 italic mb-2">"{{quote.text}}"</p>
-        <cite class="text-green-700">— {{quote.source}}</cite>
-      </blockquote>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>
+      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-4 bg-green-50 p-4 rounded-lg shadow">“When the internet was cut, we felt completely isolated. My father was arrested for a Facebook post. We are afraid to speak out.”<br><span class="text-sm text-gray-500">— Journalist, Gilgit, 2023 (HRW)</span></blockquote>
+    </section>
+    <section>
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports & Further Reading</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+        <li><a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="underline text-green-700" target="_blank">HRW: Freedom of Expression in GB (2023)</a></li>
+        <li><a href="https://hrcp.org.pk/reports/2023-skardu" class="underline text-green-700" target="_blank">HRCP: Forced Displacement in Skardu (2023)</a></li>
+      </ul>
     </section>
   </main>
 

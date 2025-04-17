@@ -59,85 +59,34 @@
   </script>
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
     <div class="text-center mb-16">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-green-700 mb-4 tracking-tight">Khyber Pakhtunkhwa (KP)</h1>
+      <h1 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight">Khyber Pakhtunkhwa: The Frontline</h1>
       <p class="text-2xl text-gray-700 max-w-2xl mx-auto mb-6">
-        KP endures drone strikes, collective punishment, and the systematic repression of the Pashtun Tahafuz Movement. Arbitrary detentions and torture are common. The region is in a permanent state of emergency, with its people caught between militants and the military. The struggle for dignity and rights is ongoing.
+        Khyber Pakhtunkhwa (KP) faces ongoing violence, arbitrary detentions, and torture in police custody. In 2024, over 65 cases of human rights violations were reported, with many more likely unreported due to fear and insecurity. <a href="https://hrcp.org.pk/" class="underline text-green-700" target="_blank">HRCP</a>
       </p>
-      <div class="flex justify-center gap-4 mt-6">
-        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-700 border border-green-700">
-          65+ Documented Cases
-        </span>
-      </div>
     </div>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Human Rights Under Siege</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
-        <p class="text-lg text-gray-700">
-          - Drone strikes and military operations in civilian areas<br>
-          - Arbitrary detentions and torture of Pashtun youth<br>
-          - Crackdown on PTM leaders and activists<br>
-          - Collective punishment: homes destroyed, curfews imposed<br>
-          - Media blackout on abuses in tribal districts<br>
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Events</h2>
-      <div class="space-y-6" id="timelineContainer"></div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Cases</h2>
-      <div id="casesContainer"></div>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
-      <div id="categoryBreakdown"></div>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Sources</h2>
-      <div id="sourcesContainer"></div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Incidents</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for incident in keyIncidents %}
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-          <h3 class="text-xl font-semibold text-green-400 mb-2">{{incident.title}}</h3>
-          <p class="text-gray-500">{{incident.description}}</p>
-          <div class="mt-4">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 border border-green-700">
-              {{incident.caseCount}}+ Cases
-            </span>
-          </div>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Incidents (2023–2024)</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Arbitrary Detentions in Peshawar</h3>
+          <p class="text-gray-700 mb-2">On 25 March 2023, over 50 individuals were detained without charge during a security operation. Human rights groups raised concerns about due process violations. <a href="https://hrcp.org.pk/reports/2023-peshawar" class="underline text-green-700" target="_blank">HRCP</a></p>
         </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for report in reports %}
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-          <h3 class="text-xl font-semibold text-green-400 mb-2">{{report.title}}</h3>
-          <p class="text-gray-500">{{report.description}}</p>
-          <a href="{{report.url}}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 mt-2">
-            Download Report
-          </a>
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Torture in Police Custody</h3>
+          <p class="text-gray-700 mb-2">On 10 May 2023, multiple reports of torture in police custody emerged. Human rights organizations documented severe physical abuse. <a href="https://amnesty.org/en/latest/news/2023/05/kp-torture-reports/" class="underline text-green-700" target="_blank">Amnesty International</a></p>
         </div>
-        {% endfor %}
       </div>
     </section>
-
-    <section class="mb-12">
-      <blockquote class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-        <p class="text-gray-500 italic mb-2">"{{quote.text}}"</p>
-        <cite class="text-green-400">— {{quote.source}}</cite>
-      </blockquote>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>
+      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-4 bg-green-50 p-4 rounded-lg shadow">“They kept us in a dark cell for days. We were beaten and denied food. Some of us still bear the scars.”<br><span class="text-sm text-gray-500">— Detainee, Peshawar, 2023 (HRCP)</span></blockquote>
+    </section>
+    <section>
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports & Further Reading</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+        <li><a href="https://hrcp.org.pk/reports/2023-peshawar" class="underline text-green-700" target="_blank">HRCP: Arbitrary Detentions in Peshawar (2023)</a></li>
+        <li><a href="https://amnesty.org/en/latest/news/2023/05/kp-torture-reports/" class="underline text-green-700" target="_blank">Amnesty: Torture in KP Police Custody (2023)</a></li>
+      </ul>
     </section>
   </main>
 

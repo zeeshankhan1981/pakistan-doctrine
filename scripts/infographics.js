@@ -242,4 +242,57 @@ document.addEventListener('DOMContentLoaded', async function () {
     renderSources('mediaChart', media.sources);
     addShareDownloadButtons('mediaChart', mediaChart, 'Media Censorship and Journalist Killings');
   } catch (e) { console.error('Media chart error:', e); }
+
+  // === Arrests by Year ===
+  try {
+    const violations = await fetchJson('data/violations.json');
+    const arrestsData = [];
+    const arrestsLabels = [];
+    let arrestsSources = [
+      'https://hrcp-web.org/hrcpweb/',
+      'https://amnesty.org/en/location/asia-and-the-pacific/south-asia/pakistan/'
+    ];
+    if (violations.regions) {
+      const byYear = {};
+      Object.values(violations.regions).forEach(region => {
+        region.cases.forEach(e => {
+          if (e.category && e.category.toLowerCase().includes('arrest')) {
+            const y = new Date(e.date).getFullYear();
+            byYear[y] = (byYear[y] || 0) + 1;
+            if (e.sources) arrestsSources = arrestsSources.concat(e.sources);
+          }
+        });
+      });
+      Object.keys(byYear).sort().forEach(y => {
+        arrestsLabels.push(y);
+        arrestsData.push(byYear[y]);
+      });
+    }
+    const arrestsCtx = document.getElementById('arrestsChart').getContext('2d');
+    const arrestsChart = new Chart(arrestsCtx, {
+      type: 'bar',
+      data: {
+        labels: arrestsLabels.length ? arrestsLabels : ['2018','2019','2020','2021','2022','2023','2024'],
+        datasets: [{
+          label: 'Arrests',
+          data: arrestsData.length ? arrestsData : [0,0,0,0,0,0,0],
+          backgroundColor: 'rgba(16, 185, 129, 0.7)',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+    renderSources('arrestsChart', Array.from(new Set(arrestsSources)));
+    addShareDownloadButtons('arrestsChart', arrestsChart, 'Arrests by Year');
+  } catch (e) {
+    console.error('Failed to render arrests chart:', e);
+  }
 });

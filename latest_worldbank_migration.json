@@ -1,0 +1,262 @@
+[
+  {
+    "year": "2024",
+    "net_migration": -1401173
+  },
+  {
+    "year": "2023",
+    "net_migration": -1619557
+  },
+  {
+    "year": "2022",
+    "net_migration": -1322625
+  },
+  {
+    "year": "2021",
+    "net_migration": -565673
+  },
+  {
+    "year": "2020",
+    "net_migration": -559291
+  },
+  {
+    "year": "2019",
+    "net_migration": -1177220
+  },
+  {
+    "year": "2018",
+    "net_migration": -1309611
+  },
+  {
+    "year": "2017",
+    "net_migration": -1574585
+  },
+  {
+    "year": "2016",
+    "net_migration": -2290411
+  },
+  {
+    "year": "2015",
+    "net_migration": -2172162
+  },
+  {
+    "year": "2014",
+    "net_migration": -2037920
+  },
+  {
+    "year": "2013",
+    "net_migration": -1906319
+  },
+  {
+    "year": "2012",
+    "net_migration": -1647989
+  },
+  {
+    "year": "2011",
+    "net_migration": -890633
+  },
+  {
+    "year": "2010",
+    "net_migration": -431902
+  },
+  {
+    "year": "2009",
+    "net_migration": -18298
+  },
+  {
+    "year": "2008",
+    "net_migration": -140746
+  },
+  {
+    "year": "2007",
+    "net_migration": 576349
+  },
+  {
+    "year": "2006",
+    "net_migration": -183933
+  },
+  {
+    "year": "2005",
+    "net_migration": -189899
+  },
+  {
+    "year": "2004",
+    "net_migration": -64669
+  },
+  {
+    "year": "2003",
+    "net_migration": -219118
+  },
+  {
+    "year": "2002",
+    "net_migration": -653758
+  },
+  {
+    "year": "2001",
+    "net_migration": -54727
+  },
+  {
+    "year": "2000",
+    "net_migration": 252869
+  },
+  {
+    "year": "1999",
+    "net_migration": -134510
+  },
+  {
+    "year": "1998",
+    "net_migration": -112191
+  },
+  {
+    "year": "1997",
+    "net_migration": -55539
+  },
+  {
+    "year": "1996",
+    "net_migration": -60855
+  },
+  {
+    "year": "1995",
+    "net_migration": 11534
+  },
+  {
+    "year": "1994",
+    "net_migration": -277100
+  },
+  {
+    "year": "1993",
+    "net_migration": -139493
+  },
+  {
+    "year": "1992",
+    "net_migration": -718387
+  },
+  {
+    "year": "1991",
+    "net_migration": -19668
+  },
+  {
+    "year": "1990",
+    "net_migration": 275242
+  },
+  {
+    "year": "1989",
+    "net_migration": -17164
+  },
+  {
+    "year": "1988",
+    "net_migration": 38139
+  },
+  {
+    "year": "1987",
+    "net_migration": 146364
+  },
+  {
+    "year": "1986",
+    "net_migration": 111045
+  },
+  {
+    "year": "1985",
+    "net_migration": 68860
+  },
+  {
+    "year": "1984",
+    "net_migration": -319242
+  },
+  {
+    "year": "1983",
+    "net_migration": -4753
+  },
+  {
+    "year": "1982",
+    "net_migration": 294252
+  },
+  {
+    "year": "1981",
+    "net_migration": 555032
+  },
+  {
+    "year": "1980",
+    "net_migration": 1078229
+  },
+  {
+    "year": "1979",
+    "net_migration": 450003
+  },
+  {
+    "year": "1978",
+    "net_migration": 111386
+  },
+  {
+    "year": "1977",
+    "net_migration": 85250
+  },
+  {
+    "year": "1976",
+    "net_migration": 48238
+  },
+  {
+    "year": "1975",
+    "net_migration": -1710
+  },
+  {
+    "year": "1974",
+    "net_migration": -34785
+  },
+  {
+    "year": "1973",
+    "net_migration": -58012
+  },
+  {
+    "year": "1972",
+    "net_migration": -69209
+  },
+  {
+    "year": "1971",
+    "net_migration": -68357
+  },
+  {
+    "year": "1970",
+    "net_migration": -58281
+  },
+  {
+    "year": "1969",
+    "net_migration": -57406
+  },
+  {
+    "year": "1968",
+    "net_migration": -58721
+  },
+  {
+    "year": "1967",
+    "net_migration": -59932
+  },
+  {
+    "year": "1966",
+    "net_migration": -61025
+  },
+  {
+    "year": "1965",
+    "net_migration": -62070
+  },
+  {
+    "year": "1964",
+    "net_migration": -63298
+  },
+  {
+    "year": "1963",
+    "net_migration": -64552
+  },
+  {
+    "year": "1962",
+    "net_migration": -65780
+  },
+  {
+    "year": "1961",
+    "net_migration": -66991
+  },
+  {
+    "year": "1960",
+    "net_migration": 0
+  }
+]

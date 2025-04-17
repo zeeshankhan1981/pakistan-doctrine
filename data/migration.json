@@ -1,8 +1,12 @@
 {
-  "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
-  "skilled_migration": [45000, 52000, 61000, 75000, 90000, 120000, 180000],
+  "years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "skilled_migration": [null, null, null, 45000, 52000, 61000, 75000, 90000, 120000, 13530000],
+  "net_migration": [-2172162, -2290411, -1574585, -1309611, -1177220, -559291, -565673, -1322625, -1619557, -1401173],
   "sources": [
     "https://tribune.com.pk/story/2419157/832000-pakistanis-leave-country-in-18-months",
-    "https://www.dawn.com/news/1789015"
+    "https://www.dawn.com/news/1789015",
+    "https://www.dawn.com/news/1894907",
+    "https://www.dawn.com/news/1889070",
+    "http://api.worldbank.org/v2/country/PK/indicator/SM.POP.NETM?format=json"
   ]
 }

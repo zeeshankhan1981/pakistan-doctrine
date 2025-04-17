@@ -1,8 +1,10 @@
 {
   "years": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
-  "journalists_killed": [4, 3, 2, 5, 7, 9, 8],
-  "censorship_cases": [15, 19, 22, 30, 40, 56, 61],
+  "journalists_killed": [4, 3, 2, 5, 7, 9, 4],
+  "censorship_cases": [15, 19, 22, 30, 40, 56, 70],
   "sources": [
+    "https://rsf.org/en/analysis-pakistani-government-s-new-online-censorship-strategy",
+    "https://rsf.org/en/alarming-signs-press-freedom-under-pakistan-s-new-authorities",
     "https://rsf.org/en/country/pakistan",
     "https://cpj.org/asia/pakistan/"
   ]

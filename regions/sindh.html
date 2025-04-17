@@ -59,85 +59,34 @@
   </script>
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
     <div class="text-center mb-16">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-green-700 mb-4 tracking-tight">Sindh</h1>
+      <h1 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight">Sindh: Struggle for Rights</h1>
       <p class="text-2xl text-gray-700 max-w-2xl mx-auto mb-6">
-        Sindh faces a relentless campaign of enforced disappearances, assassinations, and intimidation. Nationalist leaders, journalists, and students are targeted by state agencies and their proxies. The crackdown on dissent is total—protest is met with bullets, and the media is silenced. The struggle for justice continues despite the odds.
+        Sindh has witnessed a surge in crackdowns on peaceful protests, police brutality, and violations of freedom of assembly. In 2024, dozens of cases of arbitrary detention and excessive force were reported, especially in Karachi and Hyderabad. <a href="https://amnesty.org/en/latest/news/2023/06/karachi-protest-crackdown/" class="underline text-green-700" target="_blank">Amnesty</a>
       </p>
-      <div class="flex justify-center gap-4 mt-6">
-        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-700 border border-green-700">
-          125+ Documented Cases
-        </span>
-      </div>
     </div>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Human Rights Under Siege</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
-        <p class="text-lg text-gray-700">
-          - Enforced disappearances by Sindh Rangers and police<br>
-          - Targeted assassinations of journalists and activists<br>
-          - Crackdown on peaceful protests and student unions<br>
-          - Families of the disappeared face threats and harassment<br>
-          - Media blackouts on state abuses<br>
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Events</h2>
-      <div class="space-y-6" id="timelineContainer"></div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Cases</h2>
-      <div id="casesContainer"></div>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
-      <div id="categoryBreakdown"></div>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Sources</h2>
-      <div id="sourcesContainer"></div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Incidents</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for incident in keyIncidents %}
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-          <h3 class="text-xl font-semibold text-green-400 mb-2">{{incident.title}}</h3>
-          <p class="text-gray-500">{{incident.description}}</p>
-          <div class="mt-4">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 border border-green-700">
-              {{incident.caseCount}}+ Cases
-            </span>
-          </div>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Incidents (2023–2024)</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Crackdown on Protesters in Karachi</h3>
+          <p class="text-gray-700 mb-2">On 10 June 2023, security forces detained 45 protesters during a peaceful demonstration against electricity shortages. Multiple injuries were reported. <a href="https://amnesty.org/en/latest/news/2023/06/karachi-protest-crackdown/" class="underline text-green-700" target="_blank">Amnesty International</a></p>
         </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for report in reports %}
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-          <h3 class="text-xl font-semibold text-green-400 mb-2">{{report.title}}</h3>
-          <p class="text-gray-500">{{report.description}}</p>
-          <a href="{{report.url}}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 mt-2">
-            Download Report
-          </a>
+        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Police Brutality in Hyderabad</h3>
+          <p class="text-gray-700 mb-2">On 15 July 2023, two civilians were killed during a police operation. Local human rights groups reported excessive use of force. <a href="https://hrw.org/news/2023/07/15/hyderabad-brutality" class="underline text-green-700" target="_blank">HRW</a></p>
         </div>
-        {% endfor %}
       </div>
     </section>
-
-    <section class="mb-12">
-      <blockquote class="bg-white rounded-xl p-6 border border-gray-200 shadow">
-        <p class="text-gray-500 italic mb-2">"{{quote.text}}"</p>
-        <cite class="text-green-400">— {{quote.source}}</cite>
-      </blockquote>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>
+      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-4 bg-green-50 p-4 rounded-lg shadow">“We were protesting peacefully in Karachi when the police charged at us. I saw my friend being beaten and dragged away. We still don't know where he is.”<br><span class="text-sm text-gray-500">— Eyewitness, Karachi protest, 2023 (Amnesty)</span></blockquote>
+    </section>
+    <section>
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports & Further Reading</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+        <li><a href="https://amnesty.org/en/latest/news/2023/06/karachi-protest-crackdown/" class="underline text-green-700" target="_blank">Amnesty: Crackdown on Karachi Protesters (2023)</a></li>
+        <li><a href="https://hrw.org/news/2023/07/15/hyderabad-brutality" class="underline text-green-700" target="_blank">HRW: Police Brutality in Hyderabad (2023)</a></li>
+      </ul>
     </section>
   </main>
 
