@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imran Khan Doctrine | Pakistan Under Siege</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="assets/favicon.ico">
 </head>
 <body class="bg-white text-gray-900 font-serif antialiased">
@@ -12,70 +13,146 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
       <div class="flex items-center justify-between">
         <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
-        <nav class="space-x-2 md:space-x-4 flex items-center">
-          <a href="./index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a>
-          <a href="./doctrine.html" class="text-green-700 font-bold px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan Doctrine</a>
+        <!-- Responsive Nav -->
+        <nav class="relative">
+          <button id="nav-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 hover:text-green-800 hover:border-green-800 focus:outline-none" aria-label="Open Menu">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <ul id="nav-menu" class="hidden md:flex space-x-2 md:space-x-4 items-center">
+            <li><a href="../index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a></li>
+            <li><a href="../about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a></li>
+            <li><a href="#" class="text-green-700 font-bold px-4 py-2 rounded-lg text-base font-medium transition-colors">Doctrine</a></li>
+            <li><a href="../imran-khan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan</a></li>
+            <li class="relative group">
+              <button class="flex items-center text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors focus:outline-none">
+                Regions
+                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 hidden group-hover:block">
+                <li><a href="../regions/balochistan.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Balochistan</a></li>
+                <li><a href="../regions/sindh.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Sindh</a></li>
+                <li><a href="../regions/kp.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">KP</a></li>
+                <li><a href="../regions/gb.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">GB</a></li>
+                <li><a href="../regions/punjab.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Punjab</a></li>
+              </ul>
+            </li>
+            <li><a href="../reports/index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a></li>
+          </ul>
         </nav>
       </div>
     </div>
   </header>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
   <main class="max-w-4xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
-    <h2 class="text-4xl font-bold text-green-700 mb-8 text-center">Imran Khan Doctrine: Truth, Justice, Freedom</h2>
+    <h2 class="text-5xl font-extrabold text-green-700 mb-8 text-center drop-shadow tracking-tight">Imran Khan Doctrine: Truth, Justice, Freedom</h2>
     <section class="mb-12">
-      <p class="text-xl text-gray-800 mb-6">Imran Khan, Pakistan’s former Prime Minister and the founder of Pakistan Tehreek-e-Insaf (PTI), has articulated a doctrine rooted in <span class="text-green-700 font-bold">truth, justice, and freedom</span>. His vision stands firmly against Islamophobia, supports the rights of Kashmiris and Palestinians, and calls for a just, sovereign, and inclusive Pakistan. This page highlights his doctrine with real data, international recognition, and global advocacy.</p>
-      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-6">“Absolutely Not.”<br><span class="text-sm text-gray-500">— Imran Khan, rejecting U.S. military bases in Pakistan (June 2021, <a href='https://www.bbc.com/news/world-asia-57558447' class='underline text-green-700' target='_blank'>BBC</a>)</span></blockquote>
+      <p class="text-2xl text-gray-800 mb-6 text-center">Imran Khan, Pakistan’s former Prime Minister and the founder of PTI, has articulated a doctrine rooted in <span class="text-green-700 font-bold">truth, justice, and freedom</span>. His vision stands firmly against Islamophobia, supports the rights of Kashmiris and Palestinians, and calls for a just, sovereign, and inclusive Pakistan. This page highlights his doctrine with real data, international recognition, and global advocacy.</p>
+      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-6 bg-green-50 p-4 rounded-lg shadow">“Absolutely Not.”<br><span class="text-sm text-gray-500">— Imran Khan, rejecting U.S. military bases in Pakistan (June 2021, <a href='https://www.bbc.com/news/world-asia-57558447' class='underline text-green-700' target='_blank'>BBC</a>)</span></blockquote>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Global Advocacy: Stand Against Islamophobia</h3>
-      <ul class="list-disc list-inside mb-4 text-lg text-gray-700">
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Global Advocacy: Stand Against Islamophobia</h3>
+      <ul class="list-disc list-inside mb-4 text-lg text-gray-700 pl-6">
         <li>UN General Assembly adopted Resolution A/RES/76/254 (2022) designating March 15 as the International Day to Combat Islamophobia, sponsored by Pakistan under Imran Khan’s leadership. (<a href="https://www.un.org/press/en/2022/ga12440.doc.htm" class="underline text-green-700" target="_blank">UN Press</a>)</li>
         <li>Imran Khan’s 2019 UNGA speech highlighted rising Islamophobia and called for global action. (<a href="https://www.aljazeera.com/news/2019/9/27/pakistans-imran-khan-warns-un-of-bloodbath-in-kashmir" class="underline text-green-700" target="_blank">Al Jazeera</a>)</li>
       </ul>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Justice for Kashmir & Palestine</h3>
-      <ul class="list-disc list-inside mb-4 text-lg text-gray-700">
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Justice for Kashmir & Palestine</h3>
+      <ul class="list-disc list-inside mb-4 text-lg text-gray-700 pl-6">
         <li>Consistent calls for UN resolutions on Kashmir, condemning India’s revocation of Article 370 and military lockdown in 2019. (<a href="https://www.bbc.com/news/world-asia-india-49234708" class="underline text-green-700" target="_blank">BBC</a>)</li>
         <li>Vocal support for Palestinian rights, condemning Israeli actions in Gaza and advocating for a two-state solution. (<a href="https://www.aljazeera.com/news/2021/5/21/pakistan-pm-imran-khan-condemns-israeli-attacks-on-gaza" class="underline text-green-700" target="_blank">Al Jazeera</a>)</li>
       </ul>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Truth, Justice & Rule of Law</h3>
-      <ul class="list-disc list-inside mb-4 text-lg text-gray-700">
-        <li>PTI government launched the Ehsaas Program, the largest social safety net in Pakistan’s history, benefiting 15 million families (World Bank, <a href="https://www.worldbank.org/en/news/feature/2021/12/14/ehsaas-program-provides-relief-to-millions-in-pakistan" class="underline text-green-700" target="_blank">World Bank</a>).</li>
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Truth, Justice & Rule of Law</h3>
+      <ul class="list-disc list-inside mb-4 text-lg text-gray-700 pl-6">
+        <li>PTI government launched the Ehsaas Program, the largest social safety net in Pakistan’s history, benefiting 15 million families (<a href="https://www.worldbank.org/en/news/feature/2021/12/14/ehsaas-program-provides-relief-to-millions-in-pakistan" class="underline text-green-700" target="_blank">World Bank</a>).</li>
         <li>Introduced Sehat Sahulat health cards, providing free healthcare to millions of Pakistanis. (<a href="https://www.dawn.com/news/1668485" class="underline text-green-700" target="_blank">Dawn</a>)</li>
         <li>Advocated for judicial independence and accountability, including public asset declarations and anti-corruption reforms. (<a href="https://www.transparency.org/en/news/pakistan-anti-corruption-pti" class="underline text-green-700" target="_blank">Transparency International</a>)</li>
       </ul>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Leadership & International Recognition</h3>
-      <ul class="list-disc list-inside mb-4 text-lg text-gray-700">
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Leadership & International Recognition</h3>
+      <ul class="list-disc list-inside mb-4 text-lg text-gray-700 pl-6">
         <li>Named among Time Magazine’s 100 Most Influential People (2019). (<a href="https://time.com/collection/100-most-influential-people-2019/5567757/imran-khan/" class="underline text-green-700" target="_blank">Time</a>)</li>
         <li>Recognized for global peace advocacy and humanitarian work. (<a href="https://www.aljazeera.com/news/2019/9/27/pakistans-imran-khan-warns-un-of-bloodbath-in-kashmir" class="underline text-green-700" target="_blank">Al Jazeera</a>)</li>
       </ul>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Watch: Imran Khan at the United Nations</h3>
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Watch: Imran Khan at the United Nations</h3>
       <div class="flex justify-center mb-6">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qd2uQ9A8TnE" title="Imran Khan UNGA Speech 2019" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IcSb8XcSCWQ" title="Imran Khan UNGA Speech 2019 (Official)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
       </div>
-      <p class="text-gray-700 text-base mb-4">Imran Khan's 2019 speech at the United Nations General Assembly, where he called for justice for Kashmir, denounced Islamophobia, and advocated for global peace and rule of law. <a href="https://www.youtube.com/watch?v=Qd2uQ9A8TnE" class="underline text-green-700" target="_blank">Watch on YouTube</a></p>
+      <p class="text-gray-700 text-base mb-4 text-center">Imran Khan's 2019 speech at the United Nations General Assembly, where he called for justice for Kashmir, denounced Islamophobia, and advocated for global peace and rule of law. <a href="https://www.youtube.com/watch?v=IcSb8XcSCWQ" class="underline text-green-700" target="_blank">Watch on YouTube</a></p>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Recent Data & Recognition</h3>
-      <ul class="list-disc list-inside mb-4 text-lg text-gray-700">
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Featured Imran Khan Videos</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/IcSb8XcSCWQ" title="PM Imran Khan Complete Speech at 74th United Nations General Assembly Session" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">UNGA 2019 Official Speech</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/uyaQgnQCQ5k" title="Imran Khan, Prime Minister of the Islamic Republic of Pakistan, addresses the general debate of the 74th Session of the General Assembly of the UN" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">UN General Debate 2019</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/OQbbatQhbTA" title="Prime Minister of Pakistan Imran Khan Historic Speech at 74th United Nations General Assembly Session" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Historic UN Speech</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/eMggcEKpiUk" title="Imran Khan’s Historic UN Speech | Voice of Pakistan at the United Nations" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Voice of Pakistan at UN</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/14AREWQxPRQ" title="Imran Khan Full Speech at 74th United Nations General Assembly" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Full Speech at 74th UNGA</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/_tjS78mYhtg" title="Former Prime Minister Imran Khan's Historical Speech at UNGA" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Historical UNGA Speech</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/SDot9HLEIAg" title="Former PM Imran Khan’s Historical Interview on BBC World News" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">BBC World News Interview</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/QrucaOJdY2k" title="Imran Khan Documentary: Inside A Champion's Mind" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Inside A Champion's Mind (Doc)</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/p8sU90kIG0U" title="Prime Minister Imran Khan's Complete Interview on HBO Max with Jonathan Swan" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Axios on HBO Interview</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <iframe width="350" height="197" src="https://www.youtube.com/embed/KG-YgDKfzr4" title="Former Prime Minister Imran Khan's Historical Interview with Arshad Sharif" frameborder="0" allowfullscreen class="rounded-lg shadow-lg mb-2"></iframe>
+          <span class="text-gray-700 text-sm text-center">Interview with Arshad Sharif</span>
+        </div>
+      </div>
+    </section>
+    <section class="mb-10">
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Recent Data & Recognition</h3>
+      <ul class="list-disc list-inside mb-4 text-lg text-gray-700 pl-6">
         <li>Ehsaas Program provided direct cash relief to over 15 million families during COVID-19. (<a href="https://www.ehsaas.gov.pk/" class="underline text-green-700" target="_blank">Ehsaas Official Portal</a>)</li>
         <li>Sehat Sahulat health cards reached 27 million households by 2022. (<a href="https://www.pass.gov.pk/" class="underline text-green-700" target="_blank">Government of Pakistan Social Protection</a>)</li>
         <li>Imran Khan named among <a href="https://time.com/collection/100-most-influential-people-2019/5567757/imran-khan/" class="underline text-green-700" target="_blank">TIME's 100 Most Influential People (2019)</a>.</li>
       </ul>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Key Quote (2024)</h3>
-      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-6">“Our struggle is for a Pakistan where the rule of law, justice, and compassion are the foundation of society. We stand with the oppressed everywhere, from Kashmir to Palestine.”<br><span class="text-sm text-gray-500">— Imran Khan, 2024</span></blockquote>
+      <h3 class="text-3xl font-bold text-green-700 mb-4">Key Quote (2024)</h3>
+      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-6 bg-green-50 p-4 rounded-lg shadow">“Our struggle is for a Pakistan where the rule of law, justice, and compassion are the foundation of society. We stand with the oppressed everywhere, from Kashmir to Palestine.”<br><span class="text-sm text-gray-500">— Imran Khan, 2024</span></blockquote>
     </section>
     <section class="mb-10">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">References & Sources (All Links Tested)</h3>
-      <ul class="list-disc list-inside mb-4 text-lg text-gray-700">
+      <h3 class="text-3xl font-bold text-green-700 mb-4">References & Sources (All Links Tested)</h3>
+      <ul class="list-disc list-inside mb-4 text-lg text-gray-700 pl-6">
         <li><a href="https://www.ehsaas.gov.pk/" class="underline text-green-700" target="_blank">Ehsaas Official Portal</a></li>
         <li><a href="https://www.pass.gov.pk/" class="underline text-green-700" target="_blank">Government of Pakistan Social Protection</a></li>
         <li><a href="https://time.com/collection/100-most-influential-people-2019/5567757/imran-khan/" class="underline text-green-700" target="_blank">Time: 100 Most Influential People</a></li>
