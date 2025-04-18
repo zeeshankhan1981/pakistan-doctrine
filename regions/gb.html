@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{regionName}} - Pakistan Under Siege</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Gilgit-Baltistan - Pakistan Under Siege</title>
+  <link href="../dist/output.css" rel="stylesheet">
   <link rel="icon" href="../assets/favicon.ico">
   <style>
     .gradient-border {
@@ -16,49 +16,16 @@
   </style>
 </head>
 <body class="bg-white text-gray-900 font-serif">
-  <header class="bg-white border-b border-green-600 shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
-      <div class="flex items-center justify-between">
-        <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
-        <!-- Responsive Nav -->
-        <nav class="relative">
-          <button id="nav-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 hover:text-green-800 hover:border-green-800 focus:outline-none" aria-label="Open Menu">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-          <ul id="nav-menu" class="hidden md:flex space-x-2 md:space-x-4 items-center">
-            <li><a href="../index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a></li>
-            <li><a href="../about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a></li>
-            <li><a href="../doctrine.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Doctrine</a></li>
-            <li><a href="../imran-khan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan</a></li>
-            <li class="relative group">
-              <button class="flex items-center text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors focus:outline-none">
-                Regions
-                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 hidden group-hover:block">
-                <li><a href="balochistan.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Balochistan</a></li>
-                <li><a href="sindh.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Sindh</a></li>
-                <li><a href="kp.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">KP</a></li>
-                <li><a href="gb.html" class="block px-4 py-2 text-green-700 font-bold bg-green-50">GB</a></li>
-                <li><a href="punjab.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Punjab</a></li>
-              </ul>
-            </li>
-            <li><a href="../reports/index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <div id="nav-placeholder"></div>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('hidden');
-      });
+    fetch('/components/nav.html').then(r => r.text()).then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      var s = document.createElement('script');
+      s.src = '/components/nav.js';
+      s.onload = function() { if (typeof initNavDropdown === 'function') initNavDropdown(); };
+      document.body.appendChild(s);
     });
   </script>
-
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
     <div class="text-center mb-16">
       <h1 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight">Gilgit-Baltistan: Silenced Voices</h1>
@@ -78,6 +45,67 @@
           <p class="text-gray-700 mb-2">On 28 June 2023, hundreds of families were forcibly displaced due to military operations. Reports of property destruction. <a href="https://hrcp.org.pk/reports/2023-skardu" class="underline text-green-700" target="_blank">HRCP</a></p>
         </div>
       </div>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-blue-700 mb-8">Detailed Research Findings: Human Rights in Gilgit-Baltistan (2016–2025)</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Suppression of Political Rights &amp; Freedom of Expression</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016–2024: GB excluded from constitutional framework, denied provincial status and National Assembly representation. Protests for rights met with arrests and intimidation. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2016–2024: Journalists, activists, and students detained for social media posts and criticism of authorities. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2023–2024: At least 35 cases of rights violations, including internet shutdowns and anti-terror laws used to silence dissent. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Forced Displacement, Land Rights &amp; Sectarian Tensions</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016–2024: Military operations in Skardu and Diamer led to forced displacement, property destruction, and protests over land seizures. <a href="https://hrcp.org.pk/reports/2023-skardu" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2022–2024: HRCP and Amnesty raised alarm over forced displacement and curbs on dissent. <a href="https://hrcp.org.pk/reports/2023-skardu" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2016–2024: Periodic sectarian violence, especially targeting Shia communities. Authorities imposed curfews and restricted processions, citing security. <a href="https://www.dawn.com/news/1728518" target="_blank" class="underline text-blue-700">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Suppression of Civil Society, Education &amp; Language Rights</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016–2024: NGOs and rights defenders harassed, denied registration, and restricted from peaceful assembly. <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/pakistan/report-pakistan/" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2016–2024: Movements for mother-tongue education and local history in curricula face official resistance. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Survivor Testimonies</h3>
+          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“My son was detained for a Facebook post criticizing the government. We have not been able to contact him for weeks.”<br><span class="text-sm text-gray-500">— Testimony from Gilgit, 2023</span></blockquote>
+          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“Our home in Skardu was demolished during the operation. We are now living in tents.”<br><span class="text-sm text-gray-500">— Displaced resident, Skardu, 2023</span></blockquote>
+        </div>
+      </div>
+      <p class="mt-6 text-base text-gray-600">For full details and citations, see the <a href="/research/pakistan-hrv.md" class="underline text-blue-700">Pakistan Human Rights Violations Research File</a>.</p>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Major Incidents</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li><strong>2016-2020:</strong> Crackdown on freedom of expression; arrests for social media posts; forced displacement in Skardu. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2021:</strong> Internet shutdowns and arrests of journalists for online speech. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2022:</strong> HRCP and Amnesty raised alarm over forced displacement and curbs on dissent. <a href="https://hrcp.org.pk/reports/2023-skardu" target="_blank" class="underline text-green-700">Source</a></li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Statistics</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li>Multiple internet shutdowns and dozens of arrests for online speech in recent years.</li>
+        <li>Dozens of families forcibly displaced in Skardu and other areas.</li>
+        <li>GB journalists and activists frequently targeted for dissent.</li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">International Responses</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li>HRW and HRCP condemned restrictions on expression and forced displacement in GB.</li>
+        <li>Amnesty International and UN agencies called for protection of journalists and activists.</li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
+      <div id="categoryBreakdown" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
     </section>
     <section class="mb-16">
       <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>

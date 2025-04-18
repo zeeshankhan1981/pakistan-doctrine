@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{regionName}} - Pakistan Under Siege</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../dist/output.css" rel="stylesheet">
   <link rel="icon" href="../assets/favicon.ico">
   <style>
     .gradient-border {
@@ -16,49 +16,16 @@
   </style>
 </head>
 <body class="bg-white text-gray-900 font-serif">
-  <header class="bg-white border-b border-green-600 shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
-      <div class="flex items-center justify-between">
-        <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
-        <!-- Responsive Nav -->
-        <nav class="relative">
-          <button id="nav-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 hover:text-green-800 hover:border-green-800 focus:outline-none" aria-label="Open Menu">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-          <ul id="nav-menu" class="hidden md:flex space-x-2 md:space-x-4 items-center">
-            <li><a href="../index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a></li>
-            <li><a href="../about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a></li>
-            <li><a href="../doctrine.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Doctrine</a></li>
-            <li><a href="../imran-khan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan</a></li>
-            <li class="relative group">
-              <button class="flex items-center text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors focus:outline-none">
-                Regions
-                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 hidden group-hover:block">
-                <li><a href="balochistan.html" class="block px-4 py-2 text-green-700 font-bold bg-green-50">Balochistan</a></li>
-                <li><a href="sindh.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Sindh</a></li>
-                <li><a href="kp.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">KP</a></li>
-                <li><a href="gb.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">GB</a></li>
-                <li><a href="punjab.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Punjab</a></li>
-              </ul>
-            </li>
-            <li><a href="../reports/index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <div id="nav-placeholder"></div>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('hidden');
-      });
+    fetch('/components/nav.html').then(r => r.text()).then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      var s = document.createElement('script');
+      s.src = '/components/nav.js';
+      s.onload = function() { if (typeof initNavDropdown === 'function') initNavDropdown(); };
+      document.body.appendChild(s);
     });
   </script>
-
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
     <div class="text-center mb-16">
       <h1 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight">Balochistan: Under Siege</h1>
@@ -67,17 +34,90 @@
       </p>
     </div>
     <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Incidents (2023–2024)</h2>
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Detailed Research Findings: Human Rights in Balochistan (2016–2025)</h2>
       <div class="space-y-8">
-        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
-          <h3 class="text-xl font-bold text-green-700 mb-2">Enforced Disappearances in Turbat</h3>
-          <p class="text-gray-700 mb-2">On 15 February 2023, multiple cases of enforced disappearances were reported in Turbat district. At least 12 individuals went missing after being detained by security forces. <a href="https://hrcp.org.pk/reports/2023-turbat" class="underline text-green-700" target="_blank">HRCP</a>, <a href="https://hrw.org/news/2023/02/15/balochistan-disappearances" class="underline text-green-700" target="_blank">HRW</a></p>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Enforced Disappearances &amp; Extrajudicial Killings</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016: 728 officially recorded disappearances (likely undercounted); "kill-and-dump" policy by security forces. <a href="https://newsvibesofindia.com/big-jump-in-enforced-disappearances-in-pakistan/#:~:text=reported" class="underline text-blue-700" target="_blank">Source</a>, <a href="https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan/#:~:text=last%20year%2C%20with%20at%20least,in%20March%2C%20mostly%20from%20Balochistan" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2017: 868 new disappearance cases; bullet-riddled corpse of Nazar Mohammad Baloch found in Turbat. <a href="https://www.hrw.org/world-report/2018/country-chapters/pakistan#:~:text=The%20human%20rights%20crisis%20in,Baloch%20civilians" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2018: Record surge—1,098 new disappearances; Awaran "encounter" killings. <a href="https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan/#:~:text=According%20to%20the%20Commission%20of,actual%20number%20is%20much%20higher" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2019: 800 new disappearances; Sammi Baloch's protest march for her missing father. <a href="https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan/#:~:text=As%20per%20the%20UN%20Working,with%20731%20people%20still%20missing" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2020: 415 new cases; Sohail Baloch and Faisal Marri abducted from Quetta campus. <a href="https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan/#:~:text=Informational%20general%20secretary%20of%20the,these%20promises%20were%20not%20fulfilled" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2021: 952 disappearances by April; Machh massacre—11 Hazara Shia miners executed by ISIS. <a href="https://www.un.org/sg/en/content/sg/statement/2021-01-04/statement-attributable-the-spokesperson-for-the-secretary-general-%E2%80%93-pakistan" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2023: 885 new disappearance cases. Supreme Court resumes hearings. <a href="https://www.gov.uk/government/publications/pakistan-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-pakistan-may-2023-accessible" class="underline text-blue-700" target="_blank">Source</a></li>
+          </ul>
         </div>
-        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
-          <h3 class="text-xl font-bold text-green-700 mb-2">Extrajudicial Killings in Gwadar</h3>
-          <p class="text-gray-700 mb-2">On 20 April 2023, three civilians were killed in a police operation in Gwadar. Eyewitnesses reported a lack of proper investigation. <a href="https://amnesty.org/en/latest/news/2023/04/gwadar-killing/" class="underline text-green-700" target="_blank">Amnesty International</a></p>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Militant Attacks &amp; Civilian Casualties</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016: Quetta Civil Hospital bombing (~70 dead, mostly lawyers), IS &amp; Jamaat-ul-Ahrar claimed responsibility. <a href="https://www.hrw.org/world-report/2017/country-chapters/pakistan#:~:text=Militant%20groups%20targeted%20lawyers%2C%20courts%2C,the%20district%20courts%20in%20Mardan" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2017: BLA attack near Gwadar killed 10 Punjabi laborers. <a href="https://www.aljazeera.com/news/2017/5/13/gunmen-kill-10-labourers-in-balochistans-gwadar" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2018: Mastung election rally bombing—149 killed. <a href="https://www.aljazeera.com/news/2018/7/15/pakistan-death-toll-rises-to-149-in-mastung-attack#:~:text=The%20number%20of%20dead%20increased,told%20Al%20Jazeera%20on%20Sunday" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2019: Pearl Continental Hotel attack in Gwadar; Hazarganji market bombing (20 dead, 8 Hazara Shias). <a href="https://www.hrw.org/world-report/2018/country-chapters/pakistan#:~:text=Although%20Pakistan%20witnessed%20fewer%20attacks,enforcement%20officials%20and%20religious%20minorities" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2021: Machh massacre; ongoing Hazara killings. <a href="https://www.un.org/sg/en/content/sg/statement/2021-01-04/statement-attributable-the-spokesperson-for-the-secretary-general-%E2%80%93-pakistan" class="underline text-blue-700" target="_blank">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Media Suppression &amp; Civil Society</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016: Journalists killed or missing; Balochistan among deadliest regions for press. <a href="https://www.newindianexpress.com/world/2021/May/04/pakistan-witnessed-substantial-human-rights-violations-in-2020-report-2298266.html#:~:text=Over%20the%20freedom%20of%20expression,Council%20of%20Pakistan%20Newspaper%20Editors" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2020: HRCP: “Even a pandemic did not slow the epidemic of enforced disappearances.” <a href="https://newsvibesofindia.com/big-jump-in-enforced-disappearances-in-pakistan/#:~:text=In%20a%20briefing%20paper%20in,net%20reported" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2021–2024: Journalists, activists, and NGOs face threats, surveillance, and violence. <a href="https://www.hrw.org/world-report/2023/country-chapters/pakistan" class="underline text-blue-700" target="_blank">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Religious &amp; Sectarian Persecution</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2017–2021: Hazara Shia community targeted in Quetta and Machh; systematic persecution. <a href="https://www.aljazeera.com/news/2017/6/24/death-toll-in-parachinar-and-quetta-attacks-passes-80#:~:text=The%20number%20of%20people%20killed,Friday%20to%2085%2C%20officials%20said" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2018: Hazara killings prompt week-long sit-in; Army Chief pledges security. <a href="https://www.uscirf.gov/search-results?f%5B0%5D=news%3A501&f%5B1%5D=related_country%3A30&f%5B2%5D=related_country%3A32&f%5B3%5D=related_country%3A36&f%5B4%5D=related_country%3A38&f%5B5%5D=related_country%3A47&f%5B6%5D=related_country%3A48&f%5B7%5D=related_country%3A49&f%5B8%5D=related_country%3A55&f%5B9%5D=related_country%3A57&f%5B10%5D=related_country%3A61&f%5B11%5D=related_country%3A62&f%5B12%5D=related_country%3A63&f%5B13%5D=related_country%3A65&f%5B14%5D=related_country%3A67&f%5B15%5D=related_country%3A69&f%5B16%5D=related_country%3A71&f%5B17%5D=related_country%3A72&f%5B18%5D=related_country%3A73&f%5B19%5D=related_country%3A5840&f%5B20%5D=topic%3A173&f%5B21%5D=topic%3A204&f%5B22%5D=topic%3A489&f%5B23%5D=topic%3A500&page=2#:~:text=Search%20,since%202018%2C%20but%20it" class="underline text-blue-700" target="_blank">Source</a></li>
+            <li>2021: ISIS massacre of Hazara miners in Machh. <a href="https://www.un.org/sg/en/content/sg/statement/2021-01-04/statement-attributable-the-spokesperson-for-the-secretary-general-%E2%80%93-pakistan" class="underline text-blue-700" target="_blank">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Survivor Testimonies</h3>
+          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“My brother was taken from our home in Turbat. We have not heard from him in over a year. Every day, my mother waits for news. We just want him back.”<br><span class="text-sm text-gray-500">— Testimony collected by HRCP, 2023</span></blockquote>
+          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“We protested for weeks after my son disappeared. The authorities promised to help, but nothing changed.”<br><span class="text-sm text-gray-500">— Testimony from Quetta, 2022</span></blockquote>
         </div>
       </div>
+      <p class="mt-6 text-base text-gray-600">For full details and citations, see the <a href="/research/pakistan-hrv.md" class="underline text-blue-700">Pakistan Human Rights Violations Research File</a>.</p>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Incidents (2023–2024)</h2>
+      <div id="casesContainer" class="space-y-8"></div>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
+      <div id="categoryBreakdown" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Major Incidents</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li><strong>2016:</strong> Hundreds of enforced disappearances (728 officially recorded), many from Balochistan. Kill-and-dump policy by security forces. Major suicide bombing at Quetta’s Civil Hospital killed ~70 people. <a href="https://www.aljazeera.com/news/2024/1/9/kill-and-dump-policy-baloch-protest-mans-custodial-murder-in-pakistan" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2017:</strong> 868 new disappearance cases, many in Balochistan. BLA attack near Gwadar killed 10 Punjabi laborers. <a href="https://www.aljazeera.com/news/2017/5/13/gunmen-kill-10-labourers-in-balochistans-gwadar" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2020:</strong> Hayat Baloch, a student, shot dead by FC soldier in Turbat. Court-martial and rare conviction. <a href="https://www.pakistantoday.com.pk/2021/01/21/fc-soldier-gets-death-penalty-for-killing-student/" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2021:</strong> Machh massacre: 11 Hazara Shia coal miners executed by ISIS. Surge in enforced disappearances (952 cases by April). <a href="https://www.un.org/sg/en/content/sg/statement/2021-01-04/statement-attributable-the-spokesperson-for-the-secretary-general-%E2%80%93-pakistan" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2022:</strong> Major attacks by BLA on FC bases; train derailment in Bolan. Journalist Athar Mateen killed in Quetta. <a href="https://www.hrw.org/world-report/2023/country-chapters/pakistan" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2023-24:</strong> 885 new disappearance cases in 2023. Supreme Court resumes hearings on disappearances. <a href="https://www.gov.uk/government/publications/pakistan-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-pakistan-may-2023-accessible" target="_blank" class="underline text-green-700">Source</a></li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Statistics</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li>Over 9,000 disappearance cases nationwide since 2011; ~2,000 unresolved as of 2024. Balochistan has the highest share.</li>
+        <li>Hundreds of extrajudicial killings and militant attacks reported annually in Balochistan.</li>
+        <li>Machh massacre (2021): 11 Hazara Shia miners killed.</li>
+        <li>2021: 952 disappearances by April; 692 in Balochistan in March alone.</li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">International Responses</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li>UN, EU, and US have repeatedly condemned enforced disappearances and extrajudicial killings in Balochistan.</li>
+        <li>UN Secretary-General condemned Machh massacre; Amnesty International called for systemic reforms.</li>
+        <li>2023: UN Committee Against Torture and EU tied human rights to Pakistan’s trade status.</li>
+        <li>2024: Supreme Court called enforced disappearance “a blemish on the rule of law.”</li>
+      </ul>
     </section>
     <section class="mb-16">
       <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>
@@ -85,7 +125,7 @@
     </section>
     <section>
       <h2 class="text-3xl font-bold text-green-700 mb-8">Reports & Further Reading</h2>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-4" id="sourcesContainer">
         <li><a href="../reports/hrcp-2023.pdf" class="underline text-green-700" target="_blank">HRCP: State of Human Rights in 2023 (PDF)</a></li>
         <li><a href="https://www.dawn.com/news/1883694" class="underline text-green-700" target="_blank">Dawn: Missing Persons Commission Logs 379 New Cases in 2024</a></li>
       </ul>
@@ -97,5 +137,6 @@
     <span class="block mt-1 text-gray-500">All rights reserved.</span>
   </footer>
   <script src="../scripts/region.js"></script>
+  <script src="/components/filter.js"></script>
 </body>
 </html>

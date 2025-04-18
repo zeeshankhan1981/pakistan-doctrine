@@ -132,7 +132,12 @@ document.addEventListener('DOMContentLoaded', async function () {
   // === Terrorism & Fatalities ===
   try {
     const terrorism = await fetchJson('data/terrorism.json');
-    const terrorismCtx = document.getElementById('terrorismChart').getContext('2d');
+    if (!terrorism || !terrorism.years || !terrorism.incidents || !terrorism.fatalities) {
+      throw new Error('Missing terrorism data fields');
+    }
+    const terrorismCanvas = document.getElementById('terrorismChart');
+    if (!terrorismCanvas) throw new Error('terrorismChart canvas not found');
+    const terrorismCtx = terrorismCanvas.getContext('2d');
     const terrorismChart = new Chart(terrorismCtx, {
       type: 'bar',
       data: {
@@ -163,7 +168,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
     renderSources('terrorismChart', terrorism.sources);
     addShareDownloadButtons('terrorismChart', terrorismChart, 'Terrorism and Fatalities');
-  } catch (e) { console.error('Terrorism chart error:', e); }
+  } catch (e) {
+    console.error('Terrorism chart error:', e, JSON.stringify(e));
+  }
 
   // === Protest Crackdowns & Arrests ===
   try {

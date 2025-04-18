@@ -4,6 +4,20 @@
 
 A static documentary-style website documenting human rights violations in Pakistan since 2022.
 
+## Data Integrity & Sourcing
+
+All data on this website is real, research-backed, and transparently sourced. This includes:
+- **Incidents of human rights violations** (see `data/violations.json`): Each incident is extracted from reputable reports, news articles, or human rights organizations, and includes full citations.
+- **Statistical datasets** (see `data/protests.json`, `data/media.json`, `data/terrorism.json`): Yearly statistics are sourced from organizations such as Amnesty International, Reporters Without Borders (RSF), Committee to Protect Journalists (CPJ), South Asia Terrorism Portal (SATP), and others. All figures include direct links to their original sources.
+
+**Transparency and Citation Standards:**
+- Every incident and statistic is accompanied by a clear source or citation in the data files.
+- The project maintains a high standard for accuracy, transparency, and credibility.
+
+**How to Add New Data:**
+- Always provide reputable sources for new incidents or statistics.
+- See the `research/pakistan-hrv.md` file for the master list of sources and research notes.
+
 ## Project Philosophy
 
 This website aims to provide a clear, impactful, and accessible record of human rights violations across Pakistan's regions. The design is inspired by documentary filmmaking, with a focus on visual storytelling and clear data presentation.

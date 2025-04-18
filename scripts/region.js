@@ -19,22 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Display recent incidents
       const casesContainer = document.getElementById('casesContainer');
-      const casesHtml = regionData.cases.map(caseItem => `
-        <div class="bg-gray-800 p-4 rounded hover:bg-gray-700">
-          <h3 class="text-green-400 mb-2">${caseItem.title}</h3>
-          <p class="text-gray-400 mb-2">${caseItem.summary}</p>
-          <div class="text-sm text-gray-400">
-            <span>Date: ${new Date(caseItem.date).toLocaleDateString()}</span>
-            <span class="ml-4">Category: ${caseItem.category}</span>
-          </div>
-          <div class="mt-2">
-            ${caseItem.sources.map(source => `
-              <a href="${source}" class="text-green-400 underline hover:text-green-300" target="_blank">Source</a>
-            `).join('')}
-          </div>
-        </div>
-      `).join('');
-      casesContainer.innerHTML = casesHtml;
+      window.regionCases = regionData.cases;
+      // (Rendering now handled by filter.js)
 
       // Display category breakdown
       const categoryBreakdown = document.getElementById('categoryBreakdown');
@@ -59,13 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Display sources
       const sourcesContainer = document.getElementById('sourcesContainer');
-      const allSources = new Set(regionData.cases.flatMap(caseItem => caseItem.sources));
-      const sourcesHtml = Array.from(allSources).map(source => `
-        <div class="bg-gray-800 p-4 rounded hover:bg-gray-700">
-          <a href="${source}" class="text-green-400 underline hover:text-green-300" target="_blank">${new URL(source).hostname}</a>
-        </div>
-      `).join('');
-      sourcesContainer.innerHTML = sourcesHtml;
+      if (sourcesContainer) {
+        const allSources = new Set(regionData.cases.flatMap(caseItem => caseItem.sources));
+        const sourcesHtml = Array.from(allSources).map(source => `
+          <div class="bg-gray-800 p-4 rounded hover:bg-gray-700">
+            <a href="${source}" class="text-green-400 underline hover:text-green-300" target="_blank">${new URL(source).hostname}</a>
+          </div>
+        `).join('');
+        sourcesContainer.innerHTML = sourcesHtml;
+      }
 
       // === DYNAMIC TIMELINE POPULATION ===
       // Timeline section (chronological events for the region)

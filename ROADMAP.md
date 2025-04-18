@@ -75,6 +75,73 @@ This roadmap outlines the next steps to make this website a robust, authoritativ
 - **Engagement:**
   - Highlight ways to help, donate, or connect with advocacy groups.
 
+## 8. Integration of Research Content (2025)
+
+With the addition of comprehensive, source-backed content in `/research/pakistan-hrv.md` and `/research/pakistan-hrv.html`, the following steps will ensure this real content is systematically integrated throughout the website:
+
+### A. Region Pages (`/regions/*.html`)
+- **Populate with Real Incidents:**
+  - Extract incidents, statistics, and trends for each province/year from the research file.
+  - Update region JSON data files (e.g., `data/violations.json`) to reflect the real cases, dates, and sources.
+  - Ensure each region page displays:
+    - Chronological timeline of major events (with year/incident headings)
+    - Category breakdowns (enforced disappearances, extrajudicial killings, etc.)
+    - Direct citations and hyperlinks to sources for each event (use footnotes or inline links)
+    - Notable survivor testimonies or quotes (with attribution)
+    - Section for international responses (UN, Amnesty, HRW, etc.)
+
+### B. Homepage (`index.html`)
+- **Featured Reports & Timeline:**
+  - Replace placeholders with real, high-impact events from the research file (e.g., major protests, massacres, landmark court cases).
+  - Add citations and source links for every featured report/event.
+- **Infographics Section:**
+  - Update data files (e.g., `violations.json`, `protests.json`, `migration.json`) with real statistics from the research.
+  - Ensure all charts (enforced disappearances, protests, migration, etc.) use these updated numbers.
+  - Add chart footnotes/sources directly under each infographic (auto-generated from data sources in research file).
+- **Stories & Reports:**
+  - Curate and display real survivor testimonies, media stories, and report links from the research.
+
+### C. Reports Section (`/reports/`)
+- **PDF & HTML/MD Reports:**
+  - Add the research markdown and HTML files to the reports section for direct download/viewing.
+  - Link to these files from both the homepage and region pages.
+  - Ensure all reports are properly attributed and dated.
+
+### D. Data Files (`/data/*.json`)
+- **Synchronize Data:**
+  - Parse the research markdown to extract structured data (incidents, dates, categories, sources) and update all relevant JSON files.
+  - Ensure each incident in the JSON includes a `sources` array with URLs and a `summary` field for context.
+  - Add new fields as needed (e.g., `international_response`, `testimony`, `media_coverage`).
+
+### E. Citations & Source Transparency
+- **Inline & Footnote Citations:**
+  - For every statistic, quote, or event, provide a direct link to the original source (as in the research file).
+  - Consider adding a citation hover or footnote system for better UX.
+- **Dedicated Sources Page:**
+  - Aggregate all unique sources from the research file into a `/SOURCES.md` page.
+  - Link to this from the main navigation and each region page.
+
+### F. Infographics & Visuals
+- **Charts & Figures:**
+  - Use real numbers from the research for all charts (disappearances, killings, protests, etc.).
+  - Add new charts if new data types are present (e.g., forced conversions, attacks on journalists).
+  - Ensure every chart has a visible source/citation below it (auto-generated if possible).
+
+### G. Search & Archive
+- **Improve Search Index:**
+  - Rebuild the search index (`scripts/search.js`) to include new events, categories, and sources from the research.
+  - Ensure advanced filters (by year, region, category, source) are populated with real values.
+
+### H. Ongoing Content Update Process
+- **Content Pipeline:**
+  - Establish a workflow for regularly extracting new incidents from the research file and updating the site’s data and pages.
+  - Document the process for contributors (see CONTRIBUTING.md).
+
+---
+
+**Milestone:**
+- By integrating the research content as outlined, the site will transition from a demo/static archive to a living, authoritative, and fully sourced record of human rights violations in Pakistan, with transparency and credibility at its core.
+
 ---
 
 ## Immediate Next Steps (Q2 2025)

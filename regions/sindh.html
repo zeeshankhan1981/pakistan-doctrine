@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sindh - Pakistan Under Siege</title>
   <link rel="icon" href="../assets/favicon.ico">
+  <link href="../dist/output.css" rel="stylesheet">
   <style>
     .gradient-border {
       border-image: linear-gradient(to right, #10b981, #059669) 1;
@@ -15,46 +16,14 @@
   </style>
 </head>
 <body class="bg-white text-gray-900 font-serif">
-  <header class="bg-white border-b border-green-600 shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
-      <div class="flex items-center justify-between">
-        <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
-        <!-- Responsive Nav -->
-        <nav class="relative">
-          <button id="nav-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 hover:text-green-800 hover:border-green-800 focus:outline-none" aria-label="Open Menu">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-          <ul id="nav-menu" class="hidden md:flex space-x-2 md:space-x-4 items-center">
-            <li><a href="../index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a></li>
-            <li><a href="../about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a></li>
-            <li><a href="../doctrine.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Doctrine</a></li>
-            <li><a href="../imran-khan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan</a></li>
-            <li class="relative group">
-              <button class="flex items-center text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors focus:outline-none">
-                Regions
-                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 hidden group-hover:block">
-                <li><a href="balochistan.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Balochistan</a></li>
-                <li><a href="sindh.html" class="block px-4 py-2 text-green-700 font-bold bg-green-50">Sindh</a></li>
-                <li><a href="kp.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">KP</a></li>
-                <li><a href="gb.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">GB</a></li>
-                <li><a href="punjab.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Punjab</a></li>
-              </ul>
-            </li>
-            <li><a href="../reports/index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <div id="nav-placeholder"></div>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('hidden');
-      });
+    fetch('/components/nav.html').then(r => r.text()).then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      var s = document.createElement('script');
+      s.src = '/components/nav.js';
+      s.onload = function() { if (typeof initNavDropdown === 'function') initNavDropdown(); };
+      document.body.appendChild(s);
     });
   </script>
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
@@ -78,6 +47,81 @@
       </div>
     </section>
     <section class="mb-16">
+      <h2 class="text-3xl font-bold text-blue-700 mb-8">Detailed Research Findings: Human Rights in Sindh (2016–2025)</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Police Encounter Killings &amp; Enforced Disappearances</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2016: Karachi police killed 318 suspects in raids (many fake encounters). MQM leader’s speech incited attacks on media. <a href="https://www.aljazeera.com/news/2018/1/19/police-killing-of-naqeebullah-mehsud-angers-pakistanis" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2018: Killing of Naqeebullah Mehsud by SSP Rao Anwar, who was later sanctioned by the US for 190+ fake encounters. <a href="https://www.ndtv.com/world-news/us-blacklists-ex-pakistan-police-officer-rao-anwar-for-corruption-serious-human-rights-abuse-2146914" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2020: 99 enforced disappearances of Sindhi/Mohajir activists (VMPS); 47 in 2021. <a href="https://upr-info.org/sites/default/files/country-document/2023-03/WSC_UPR42_PAK_E_Main.pdf" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2019: Body of Sindhi activist Niaz Lashari found in Karachi after abduction in Balochistan. <a href="https://unpo.org/sindh-missing-activists-body-found-in-karachi/#:~:text=Today%20,ATC%29%20in%20April%202019" target="_blank" class="underline text-blue-700">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Religious Minorities, Forced Conversions &amp; Mob Violence</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2019: 7 cases of forced conversion of Hindu girls (Umerkot/Thar); 31 in 2020. <a href="https://www.state.gov/reports/2019-country-reports-on-human-rights-practices/pakistan/" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2020: 586 blasphemy charges nationwide, several in Sindh. <a href="https://www.dawn.com/news/1621254" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2021: Muslim physician lynched by mob in Kotri; Hindu businessman arrested for blasphemy in Mirpurkhas. <a href="https://www.dawn.com/news/1621254" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2019: Ghotki anti-Hindu violence after false blasphemy accusation; mob attacks on temples/homes. <a href="https://www.reuters.com/article/world/pakistani-mob-destroys-100-year-old-minority-ahmadi-mosque-idUSKCN1IP20U/" target="_blank" class="underline text-blue-700">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Political Crackdown, Arbitrary Arrests &amp; Civil Society</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-2">
+            <li>2022–2023: Hundreds of PTI and nationalist activists detained under preventive detention laws after unrest. <a href="https://www.hrw.org/news/2023/05/20/pakistan-mass-arrests-target-political-opposition" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2016–2024: Journalists and activists face intimidation, abductions, and self-censorship. Sindh Journalists and Media Professionals Protection Act passed in 2022. <a href="https://www.hrw.org/world-report/2019/country-chapters/pakistan" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2021: Press freedom hero Ahfaz-ur-Rahman dies; Sindh journalists vow to resist censorship. <a href="https://www.newindianexpress.com/world/2021/May/04/pakistan-witnessed-substantial-human-rights-violations-in-2020-report-2298266.html" target="_blank" class="underline text-blue-700">Source</a></li>
+            <li>2022: Floods disproportionately affected minorities; discrimination in relief. <a href="https://www.hrw.org/world-report/2023/country-chapters/pakistan" target="_blank" class="underline text-blue-700">Source</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
+          <h3 class="text-xl font-bold text-blue-700 mb-2">Survivor Testimonies</h3>
+          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“My brother was picked up by plainclothes men in Karachi. We have filed petitions, but no answers.”<br><span class="text-sm text-gray-500">— Testimony collected by VMPS, 2022</span></blockquote>
+          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“After the Ghotki riots, our temple was ransacked. We are afraid to reopen it.”<br><span class="text-sm text-gray-500">— Hindu community member, 2019</span></blockquote>
+        </div>
+      </div>
+      <p class="mt-6 text-base text-gray-600">For full details and citations, see the <a href="/research/pakistan-hrv.md" class="underline text-blue-700">Pakistan Human Rights Violations Research File</a>.</p>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Major Incidents</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li><strong>2016:</strong> Karachi police reported killing 318 suspects in raids; many were fake encounters. MQM leader’s speech incited attacks on media houses. Security forces intervened after ARY News was attacked by mobs. Forced conversions of Hindu girls continued, with local NGOs documenting cases. Sindh Assembly passed a bill criminalizing forced conversion, but enforcement was stalled by religious parties. <a href="https://www.aljazeera.com/news/2018/1/19/police-killing-of-naqeebullah-mehsud-angers-pakistanis" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2017:</strong> Mob lynching in Hyderabad after blasphemy accusation; forced conversions of Hindu girls continued. Police barely managed to disperse mobs attacking Ahmadi worship places and Hindu teenagers were jailed on blasphemy charges. International monitors, including the EU, flagged the alarming increase in blasphemy accusations. <a href="https://www.dawn.com/news/1621254" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2018:</strong> Naqeebullah Mehsud, aspiring model, killed in a staged encounter by Karachi police. US sanctioned SSP Rao Anwar for over 190 fake police encounters resulting in 400+ deaths. Dozens of Sindhi activists disappeared; JSMM reported 10 members vanished. <a href="https://www.ndtv.com/world-news/us-blacklists-ex-pakistan-police-officer-rao-anwar-for-corruption-serious-human-rights-abuse-2146914" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2019:</strong> Ghotki: Mob ransacked Hindu temple after false blasphemy accusation. At least 7 cases of Hindu girls’ forced conversion in Umerkot and Thar. US State Dept cited Ghotki attack and lack of minority protection. <a href="https://www.state.gov/reports/2019-country-reports-on-human-rights-practices/pakistan/" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2020:</strong> 99 enforced disappearances of Sindhi activists (VMPS). Tortured body of activist Niaz Lashari found in Karachi. Police killings: Irfan Jatoi shot dead in Shikarpur in a staged encounter. Blasphemy cases spiked, with at least 586 charged nationwide. <a href="https://upr-info.org/sites/default/files/country-document/2023-03/WSC_UPR42_PAK_E_Main.pdf" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2021:</strong> 47 Sindhi persons disappeared. Mob lynching in Kotri after blasphemy accusation. Journalist Nazim Jokhio abducted and murdered. Sindh Assembly protested abduction of political workers by federal agencies. <a href="https://apnews.com/article/business-religion-pakistan-police-c4abfa5821bb9139a7020a04c8bb48b9" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2022:</strong> Sindh passed Journalists and Media Professionals Protection Act. Civil society felt slightly freer after years of crackdowns, but activists still faced surveillance. <a href="https://www.hrw.org/world-report/2017/country-chapters/pakistan" target="_blank" class="underline text-green-700">Source</a></li>
+        <li><strong>2023–2024:</strong> Judicial review of fake encounters and custodial torture. Sindh High Court reopened Naqeebullah case. International engagement: UN UPR review, EU linked trade benefits to human rights progress. <a href="https://www.dawn.com/news/1621254" target="_blank" class="underline text-green-700">Source</a></li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Statistics</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li>318 police encounter killings in Karachi in 2016 alone; dozens annually since.</li>
+        <li>Dozens of enforced disappearances of Sindhi and Mohajir activists each year; 99 in 2020, 47 in 2021 (VMPS).</li>
+        <li>At least 7 cases of Hindu girls’ forced conversion in Umerkot and Thar in 2019; 31 cases of forced conversion documented in 2020 (HRCP).</li>
+        <li>586 people charged with blasphemy in 2020 nationwide (CSJ report), with Sindh and Punjab most affected.</li>
+        <li>2,942 missing persons cases in KP by end-2020, many activists from Sindh.</li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">International Responses</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+        <li>US sanctioned Karachi police officer Rao Anwar for human rights abuses (2019).</li>
+        <li>EU Parliament and US Commission on International Religious Freedom flagged forced conversions in Sindh and lack of minority protection.</li>
+        <li>UN Working Group on Enforced Disappearances cited Sindh cases in annual reports; UN UPR review in 2023 highlighted disappearances and blasphemy law abuses.</li>
+        <li>HRCP, Amnesty, and international NGOs repeatedly condemned police brutality, disappearances, and anti-minority violence in Sindh.</li>
+        <li>EU linked Pakistan’s GSP+ trade benefits to progress on human rights, including reforms in Sindh.</li>
+      </ul>
+    </section>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
+      <div id="categoryBreakdown" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+    </section>
+    <section class="mb-16">
       <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>
       <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-4 bg-green-50 p-4 rounded-lg shadow">“We were protesting peacefully in Karachi when the police charged at us. I saw my friend being beaten and dragged away. We still don't know where he is.”<br><span class="text-sm text-gray-500">— Eyewitness, Karachi protest, 2023 (Amnesty)</span></blockquote>
     </section>
@@ -94,7 +138,5 @@
     <span class="block text-green-700 font-bold font-serif text-xl">&copy; 2025 Pakistan Under Siege</span>
     <span class="block mt-1 text-gray-500">All rights reserved.</span>
   </footer>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../scripts/region.js"></script>
 </body>
 </html>

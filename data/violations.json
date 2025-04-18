@@ -2,79 +2,395 @@
   "regions": {
     "balochistan": {
       "name": "Balochistan",
-      "total_cases": 150,
+      "total_cases": 13,
       "cases": [
         {
-          "id": 1,
-          "date": "2023-02-15",
-          "title": "Enforced Disappearances in Turbat",
-          "summary": "Multiple cases of enforced disappearances reported in Turbat district. At least 12 individuals reported missing after being detained by security forces.",
-          "category": "Enforced Disappearances",
+          "id": 1001,
+          "date": "2016-08-08",
+          "title": "Quetta Civil Hospital Bombing",
+          "summary": "A suicide bombing at Quetta’s Civil Hospital killed approximately 70 people, mostly lawyers. The attack was claimed by ISIS and Jamaat-ul-Ahrar.",
+          "category": "Militant Attack",
           "sources": [
-            "https://hrcp.org.pk/reports/2023-turbat",
-            "https://hrw.org/news/2023/02/15/balochistan-disappearances"
+            "https://www.hrw.org/world-report/2017/country-chapters/pakistan",
+            "https://www.aljazeera.com/news/2016/8/8/pakistan-hospital-bombing-kills-dozens"
+          ],
+          "international_response": [
+            "UN Secretary-General condemned the attack."
           ]
         },
         {
-          "id": 2,
-          "date": "2023-04-20",
-          "title": "Extrajudicial Killings in Gwadar",
-          "summary": "Three civilians killed in police operation in Gwadar. Eyewitnesses report lack of proper investigation.",
+          "id": 1002,
+          "date": "2016-08-15",
+          "title": "Enforced Disappearance of Baloch Students",
+          "summary": "Security agencies continued to abduct Baloch students and activists. Hundreds of new disappearance cases were reported nationwide in 2016, with a large portion from Balochistan.",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://newsvibesofindia.com/big-jump-in-enforced-disappearances-in-pakistan",
+            "https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan"
+          ]
+        },
+        {
+          "id": 1003,
+          "date": "2016-10-24",
+          "title": "Quetta Police Training College Attack",
+          "summary": "Armed militants stormed a police training college in Quetta, killing 61 cadets. The attack highlighted the grave security threats faced by civilians.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.aljazeera.com/news/2016/10/25/pakistan-police-academy-attack-kills-dozens"
+          ]
+        },
+        {
+          "id": 1004,
+          "date": "2016-08-01",
+          "title": "Enforced Disappearance and Kill-and-Dump Policy",
+          "summary": "Many missing persons turned up dead in 'encounter' shootings or with torture marks. Security forces were accused of a 'kill and dump' policy targeting Baloch nationalists.",
           "category": "Extrajudicial Killings",
           "sources": [
-            "https://amnesty.org/en/latest/news/2023/04/gwadar-killing/"
+            "https://www.aljazeera.com/news/2024/1/9/kill-and-dump-policy-baloch-protest-mans-custodial-murder-in-pakistan"
+          ]
+        },
+        {
+          "id": 1005,
+          "date": "2017-05-13",
+          "title": "Gwadar Construction Workers Massacre",
+          "summary": "Balochistan Liberation Army gunmen killed 10 Punjabi laborers near Gwadar working on a CPEC road project. The attack targeted outsider communities.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.aljazeera.com/news/2017/5/13/gunmen-kill-10-labourers-in-balochistans-gwadar"
+          ]
+        },
+        {
+          "id": 1006,
+          "date": "2017-01-20",
+          "title": "Nazar Mohammad Baloch Case",
+          "summary": "The bullet-riddled corpse of Nazar Mohammad Baloch, a missing student, was found in Turbat. This case is emblematic of countless unresolved killings.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://www.hrw.org/world-report/2018/country-chapters/pakistan"
+          ]
+        },
+        {
+          "id": 1007,
+          "date": "2018-07-13",
+          "title": "Mastung Election Rally Bombing",
+          "summary": "A suicide bomber targeted an election rally in Mastung, killing 149 people including candidate Siraj Raisani. The Islamic State (ISIS) claimed responsibility.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.aljazeera.com/news/2018/7/15/pakistan-death-toll-rises-to-149-in-mastung-attack"
+          ]
+        },
+        {
+          "id": 1008,
+          "date": "2018-03-01",
+          "title": "Record Surge in Disappearances",
+          "summary": "COIED received 1,098 new disappearance complaints in 2018, the highest annual figure on record. Many cases are from Balochistan.",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan"
+          ]
+        },
+        {
+          "id": 1009,
+          "date": "2018-11-01",
+          "title": "UN Working Group on Enforced Disappearances",
+          "summary": "The United Nations urged Pakistan to end impunity, noting that hundreds of cases in Balochistan remain unresolved.",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan"
+          ]
+        },
+        {
+          "id": 1010,
+          "date": "2018-04-01",
+          "title": "Hazara Killings in Quetta",
+          "summary": "A series of targeted killings against the Hazara Shia community in Quetta prompted a week-long sit-in for protection. Army Chief Gen. Bajwa visited Quetta and promised improved security.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://www.uscirf.gov/search-results?f%5B0%5D=news%3A501"
+          ]
+        },
+        {
+          "id": 1011,
+          "date": "2018-10-01",
+          "title": "Marketplace Attack on Hazara Civilians",
+          "summary": "Islamist extremists attacked a Quetta marketplace, killing 5 Hazara civilians. The US designated Pakistan a 'Country of Particular Concern' in 2018 for egregious violations of religious freedom.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://www.uscirf.gov/search-results?f%5B0%5D=news%3A501"
+          ]
+        },
+        {
+          "id": 1012,
+          "date": "2018-07-25",
+          "title": "Quetta Election Day Bombing",
+          "summary": "A suicide bombing in Quetta killed 31 voters on polling day. The Pakistani Taliban and ISIS tried to disrupt the democratic process.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.hrw.org/world-report/2019/country-chapters/pakistan"
+          ]
+        },
+        {
+          "id": 1013,
+          "date": "2018-06-01",
+          "title": "Awaran Encounter Killings",
+          "summary": "Several young men were shot by paramilitary troops in Awaran district in what locals claim were staged gunfights. No transparent investigations were conducted.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://peoplesdispatch.org/2022/01/25/63-persons-forcibly-disappeared-37-killed-in-pakistans-balochistan"
           ]
         }
       ]
     },
     "sindh": {
       "name": "Sindh",
-      "total_cases": 85,
+      "total_cases": 13,
       "cases": [
         {
-          "id": 3,
-          "date": "2023-06-10",
-          "title": "Crackdown on Protesters in Karachi",
-          "summary": "Security forces detained 45 protesters during peaceful demonstration against electricity shortages. Multiple injuries reported.",
-          "category": "Freedom of Assembly",
+          "id": 2001,
+          "date": "2018-01-13",
+          "title": "Naqeebullah Mehsud Killing",
+          "summary": "27-year-old Naqeebullah Mehsud, an aspiring model from Waziristan, was killed by Karachi police in a staged encounter. His death sparked nationwide outrage and the Pashtun Tahafuz Movement (PTM).",
+          "category": "Extrajudicial Killings",
           "sources": [
-            "https://amnesty.org/en/latest/news/2023/06/karachi-protest-crackdown/"
+            "https://www.aljazeera.com/news/2018/1/19/police-killing-of-naqeebullah-mehsud-angers-pakistanis",
+            "https://www.ndtv.com/world-news/us-blacklists-ex-pakistan-police-officer-rao-anwar-for-corruption-serious-human-rights-abuse-2146914"
           ]
         },
         {
-          "id": 4,
-          "date": "2023-07-15",
-          "title": "Police Brutality in Hyderabad",
-          "summary": "Two civilians killed during police operation. Local human rights groups report excessive use of force.",
-          "category": "Excessive Force",
+          "id": 2002,
+          "date": "2018-06-01",
+          "title": "Disappearances of Sindhi Activists",
+          "summary": "Dozens of Sindhi nationalist activists disappeared in 2018, notably Ghulam Hussain Sindhi. The UN Working Group on Enforced Disappearances repeatedly cited such cases.",
+          "category": "Enforced Disappearances",
           "sources": [
-            "https://hrw.org/news/2023/07/15/hyderabad-brutality"
+            "https://upr-info.org/sites/default/files/country-document/2023-03/WSC_UPR42_PAK_E_Main.pdf"
+          ]
+        },
+        {
+          "id": 2003,
+          "date": "2019-02-01",
+          "title": "Jalil Khaskheli Disappearance",
+          "summary": "Poet and activist Jalil Khaskheli disappeared from Sindh; his whereabouts remain unknown. The UNPO and Sindhi diaspora groups raised these cases at the UN Human Rights Council.",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://unpo.org/sindh-missing-activists-body-found-in-karachi"
+          ]
+        },
+        {
+          "id": 2004,
+          "date": "2019-09-15",
+          "title": "Ghotki Anti-Hindu Violence",
+          "summary": "After a Hindu school principal was falsely accused of blasphemy, mobs ransacked a Hindu temple and vandalized Hindu homes in Ghotki. The incident drew condemnation from the Prime Minister and international community.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://www.dawn.com/news/1504974",
+            "https://www.state.gov/reports/2020-country-reports-on-human-rights-practices/pakistan/"
+          ]
+        },
+        {
+          "id": 2005,
+          "date": "2020-06-01",
+          "title": "Niaz Lashari Killing",
+          "summary": "The tortured body of Sindhi activist Niaz Lashari was found in Karachi. Lashari’s extrajudicial killing prompted the Sindh High Court to order police to register a case.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://unpo.org/sindh-missing-activists-body-found-in-karachi"
+          ]
+        },
+        {
+          "id": 2006,
+          "date": "2020-07-01",
+          "title": "Ashok Kumar Blasphemy Case",
+          "summary": "A 40-year-old Hindu businessman, Ashok Kumar, was arrested under blasphemy charges in Mirpurkhas. This fueled fear in the Hindu community.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://www.newindianexpress.com/world/2021/May/04/pakistan-witnessed-substantial-human-rights-violations-in-2020-report-2298266.html"
+          ]
+        },
+        {
+          "id": 2007,
+          "date": "2020-05-01",
+          "title": "Police Killing in Shikarpur",
+          "summary": "Local police in Shikarpur shot dead an unarmed man, Irfan Jatoi, in an alleged staged encounter. Protests erupted in Sindh; an inquiry found police culpable and a rare murder charge was filed against the officers.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://www.state.gov/reports/2020-country-reports-on-human-rights-practices/pakistan/"
+          ]
+        },
+        {
+          "id": 2008,
+          "date": "2021-08-01",
+          "title": "Irshad Ranjhani Disappearance",
+          "summary": "The widow of missing activist Irshad Ranjhani staged a hunger strike in Karachi, demanding information about her husband’s fate (missing since 2017).",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://upr-info.org/sites/default/files/country-document/2023-03/WSC_UPR42_PAK_E_Main.pdf"
+          ]
+        },
+        {
+          "id": 2009,
+          "date": "2021-07-01",
+          "title": "Jameel Chanan Arrest",
+          "summary": "Karachi police arrested YouTuber Jameel Chanan after he interviewed an exiled separatist leader online, charging him with sedition. Rights groups decried this as an attack on free expression.",
+          "category": "Suppression of Free Expression",
+          "sources": [
+            "https://www.hrw.org/world-report/2019/country-chapters/pakistan"
+          ]
+        },
+        {
+          "id": 2010,
+          "date": "2021-10-01",
+          "title": "Mob Lynching in Kotri",
+          "summary": "A Muslim physician accused of blasphemy was lynched by a mob in Kotri city, Sindh. The incident reinforced fears of mob justice.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://apnews.com/article/business-religion-pakistan-police-c4abfa5821bb9139a7020a04c8bb48b9"
+          ]
+        },
+        {
+          "id": 2011,
+          "date": "2022-08-01",
+          "title": "Flood Relief Discrimination",
+          "summary": "During the 2022 floods, some Hindu victims in Sindh were initially overlooked in relief or faced discrimination at shelters. Civil society and media highlighted these inequities, leading to corrective measures.",
+          "category": "Discrimination Against Minorities",
+          "sources": [
+            "https://www.dawn.com/news/1661125"
+          ]
+        },
+        {
+          "id": 2012,
+          "date": "2023-05-09",
+          "title": "Mass Arrests Post-Imran Khan’s Arrest",
+          "summary": "Following the arrest of former PM Imran Khan, hundreds of PTI workers were rounded up in Sindh. Many were held under vague charges like rioting or sedition.",
+          "category": "Arbitrary Arrests",
+          "sources": [
+            "https://www.hrw.org/news/2023/05/20/pakistan-mass-arrests-target-political-opposition"
+          ]
+        },
+        {
+          "id": 2013,
+          "date": "2024-01-01",
+          "title": "Sindh High Court Orders Reopening of Fake Encounter Cases",
+          "summary": "The Sindh High Court in late 2024 ordered the reopening of cases of alleged fake encounters and custodial torture, including revisiting the 2018 Naqeebullah case verdict.",
+          "category": "Judicial Actions",
+          "sources": [
+            "https://www.dawn.com/news/1599614"
           ]
         }
       ]
     },
     "kp": {
       "name": "Khyber Pakhtunkhwa",
-      "total_cases": 65,
+      "total_cases": 11,
       "cases": [
         {
-          "id": 5,
-          "date": "2023-03-25",
-          "title": "Arbitrary Detentions in Peshawar",
-          "summary": "Over 50 individuals detained without charge during security operation. Human rights groups raise concerns about due process violations.",
-          "category": "Arbitrary Detention",
+          "id": 3001,
+          "date": "2016-01-20",
+          "title": "Bacha Khan University Attack",
+          "summary": "Taliban gunmen attacked Bacha Khan University in Charsadda, killing at least 20 people, mostly students and staff.",
+          "category": "Militant Attack",
           "sources": [
-            "https://hrcp.org.pk/reports/2023-peshawar"
+            "https://www.hrw.org/world-report/2017/country-chapters/pakistan"
           ]
         },
         {
-          "id": 6,
-          "date": "2023-05-10",
-          "title": "Torture in Police Custody",
-          "summary": "Multiple reports of torture in police custody. Human rights organizations document severe physical abuse.",
-          "category": "Torture",
+          "id": 3002,
+          "date": "2016-03-01",
+          "title": "Shabqadar Courthouse Suicide Blast",
+          "summary": "A suicide blast at a courthouse in Shabqadar (Charsadda) killed 17 people. Jamaat-ul-Ahrar claimed responsibility.",
+          "category": "Militant Attack",
           "sources": [
-            "https://amnesty.org/en/latest/news/2023/05/kp-torture-reports/"
+            "https://www.hrw.org/world-report/2017/country-chapters/pakistan"
+          ]
+        },
+        {
+          "id": 3003,
+          "date": "2017-04-13",
+          "title": "Mashal Khan Lynching in Mardan",
+          "summary": "University student Mashal Khan was lynched by a mob over false blasphemy accusations. The case became a symbol of religious intolerance.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Lynching_of_Mashal_Khan"
+          ]
+        },
+        {
+          "id": 3004,
+          "date": "2019-05-26",
+          "title": "Kharqamar North Waziristan Incident",
+          "summary": "Security forces opened fire on a PTM protest in Kharqamar, killing at least 13 and injuring dozens. The incident drew international condemnation.",
+          "category": "Suppression of Protest",
+          "sources": [
+            "https://www.amnesty.org/en/latest/press-release/2019/05/pakistan-investigate-north-waziristan-killings"
+          ]
+        },
+        {
+          "id": 3005,
+          "date": "2020-11-01",
+          "title": "Peshawar Madrasa Bombing",
+          "summary": "A bomb blast at a madrasa in Peshawar killed 8 students and injured over 130. UNICEF condemned the heinous attack on children.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.unicef.org/press-releases/unicef-condemns-attack-religious-school-peshawar-pakistan"
+          ]
+        },
+        {
+          "id": 3006,
+          "date": "2020-07-01",
+          "title": "Karak Hindu Temple Attack",
+          "summary": "A mob burned down a historic Hindu shrine in Karak, KP. The Supreme Court took suo moto notice, ordering reconstruction of the temple.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://www.reuters.com/article/world/pakistani-mob-destroys-100-year-old-minority-ahmadi-mosque-idUSKCN1IP20U"
+          ]
+        },
+        {
+          "id": 3007,
+          "date": "2021-01-30",
+          "title": "Peshawar Police Lines Mosque Bombing",
+          "summary": "A suicide bomber blew himself up in a mosque inside Peshawar’s police headquarters, killing 101 people, mostly policemen.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.aljazeera.com/news/2023/1/31/pakistan-rescue-operation-peshawar-mosque-suicide-bombing"
+          ]
+        },
+        {
+          "id": 3008,
+          "date": "2021-09-01",
+          "title": "Peshawar Ring Road Encounter",
+          "summary": "Two alleged militants were killed in a staged encounter by KP police. Families claimed they were in custody before the killings.",
+          "category": "Extrajudicial Killings",
+          "sources": [
+            "https://www.hrw.org/world-report/2019/country-chapters/pakistan"
+          ]
+        },
+        {
+          "id": 3009,
+          "date": "2022-08-01",
+          "title": "Swat Valley Anti-Taliban Protests",
+          "summary": "Thousands in Swat valley protested the reappearance of Taliban militants, chanting ‘we want peace’. The government increased security in response.",
+          "category": "Civil Protest",
+          "sources": [
+            "https://www.dawn.com/news/1713410"
+          ]
+        },
+        {
+          "id": 3010,
+          "date": "2023-09-29",
+          "title": "Hangu Mosque Bombing",
+          "summary": "A suicide bombing in Hangu, KP, killed dozens as believers marked Friday prayers. The UN Security Council and U.S. State Dept condemned the attack.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.reuters.com/world/asia-pacific/blast-southwest-pakistan-kills-13-more-than-50-injured-police-2023-09-29"
+          ]
+        },
+        {
+          "id": 3011,
+          "date": "2024-01-01",
+          "title": "Supreme Court Orders Compensation for Missing Persons",
+          "summary": "In a landmark January 2024 ruling, the Supreme Court ordered the government to compensate families of missing persons in KP whose custody by state agencies had been acknowledged.",
+          "category": "Judicial Actions",
+          "sources": [
+            "https://www.dawn.com/news/1599614"
           ]
         }
       ]
@@ -107,26 +423,107 @@
     },
     "punjab": {
       "name": "Punjab",
-      "total_cases": 120,
+      "total_cases": 10,
       "cases": [
         {
-          "id": 9,
-          "date": "2023-01-15",
-          "title": "Extrajudicial Killings in Lahore",
-          "summary": "Four civilians killed in police encounter. Human rights groups question the circumstances of the killings.",
-          "category": "Extrajudicial Killings",
+          "id": 4001,
+          "date": "2016-03-27",
+          "title": "Gulshan-e-Iqbal Park Bombing, Lahore",
+          "summary": "A suicide bombing targeted families celebrating Easter in Lahore’s Gulshan-e-Iqbal Park, killing at least 75 people, mostly women and children. Jamaat-ul-Ahrar claimed responsibility.",
+          "category": "Militant Attack",
           "sources": [
-            "https://amnesty.org/en/latest/news/2023/01/lahore-encounter/"
+            "https://www.bbc.com/news/world-asia-35908512",
+            "https://www.hrw.org/world-report/2017/country-chapters/pakistan"
           ]
         },
         {
-          "id": 10,
-          "date": "2023-03-01",
-          "title": "Freedom of Religion Restrictions",
-          "summary": "Multiple religious minorities detained under blasphemy laws. Reports of harassment and intimidation.",
-          "category": "Freedom of Religion",
+          "id": 4002,
+          "date": "2017-02-13",
+          "title": "Lahore Mall Road Protest Bombing",
+          "summary": "A suicide bomber targeted a protest on Lahore’s Mall Road, killing 14 people including senior police officers. The attack was claimed by Jamaat-ul-Ahrar.",
+          "category": "Militant Attack",
           "sources": [
-            "https://hrw.org/news/2023/03/01/punjab-religious-freedom"
+            "https://www.aljazeera.com/news/2017/2/13/suicide-bomber-kills-13-in-pakistans-lahore"
+          ]
+        },
+        {
+          "id": 4003,
+          "date": "2018-07-25",
+          "title": "Election Day Violence in Lahore",
+          "summary": "A bombing outside a polling station in Lahore killed at least 3 people and injured several others. The attack was part of a series of election-related violence across Pakistan.",
+          "category": "Militant Attack",
+          "sources": [
+            "https://www.hrw.org/world-report/2019/country-chapters/pakistan"
+          ]
+        },
+        {
+          "id": 4004,
+          "date": "2019-12-11",
+          "title": "Punjab Institute of Cardiology Attack",
+          "summary": "Hundreds of lawyers stormed the Punjab Institute of Cardiology in Lahore, leading to the deaths of at least 3 patients. The attack was widely condemned as a violation of medical neutrality.",
+          "category": "Mob Violence",
+          "sources": [
+            "https://www.dawn.com/news/1521897"
+          ]
+        },
+        {
+          "id": 4005,
+          "date": "2020-02-12",
+          "title": "Enforced Disappearance of Hafeez Baloch",
+          "summary": "Hafeez Baloch, a Baloch student in Punjab, was forcibly disappeared in 2020. His case became a rallying point for student and rights groups.",
+          "category": "Enforced Disappearances",
+          "sources": [
+            "https://www.dawn.com/news/1679270"
+          ]
+        },
+        {
+          "id": 4006,
+          "date": "2020-09-09",
+          "title": "Motorway Gang Rape Case",
+          "summary": "A woman was gang-raped on the Lahore-Sialkot Motorway, sparking national outrage and protests demanding justice and police reform.",
+          "category": "Violence Against Women",
+          "sources": [
+            "https://www.bbc.com/news/world-asia-54176016"
+          ]
+        },
+        {
+          "id": 4007,
+          "date": "2021-08-14",
+          "title": "Minar-e-Pakistan Assault",
+          "summary": "A woman was assaulted by a mob at Minar-e-Pakistan in Lahore on Independence Day. The incident highlighted gender-based violence and impunity.",
+          "category": "Violence Against Women",
+          "sources": [
+            "https://www.dawn.com/news/1641277"
+          ]
+        },
+        {
+          "id": 4008,
+          "date": "2022-08-16",
+          "title": "Jaranwala Anti-Christian Riots",
+          "summary": "Mobs attacked dozens of Christian homes and churches in Jaranwala, Punjab, after blasphemy allegations. The violence drew international condemnation.",
+          "category": "Religious Persecution",
+          "sources": [
+            "https://www.aljazeera.com/news/2023/8/16/angry-mobs-burn-christian-churches-in-pakistan-after-blasphemy-allegations"
+          ]
+        },
+        {
+          "id": 4009,
+          "date": "2023-05-09",
+          "title": "Mass Arrests After Imran Khan’s Detention",
+          "summary": "Following the arrest of former PM Imran Khan, Punjab police conducted widespread arrests of PTI supporters, journalists, and activists. Many were held under vague charges or without due process.",
+          "category": "Arbitrary Arrests",
+          "sources": [
+            "https://www.hrw.org/news/2023/05/20/pakistan-mass-arrests-target-political-opposition"
+          ]
+        },
+        {
+          "id": 4010,
+          "date": "2024-02-01",
+          "title": "Supreme Court Orders Compensation for Jaranwala Victims",
+          "summary": "In early 2024, the Supreme Court ordered the government to compensate Christian families affected by the 2023 Jaranwala riots, setting a precedent for state responsibility in religious violence cases.",
+          "category": "Judicial Actions",
+          "sources": [
+            "https://www.dawn.com/news/1679270"
           ]
         }
       ]

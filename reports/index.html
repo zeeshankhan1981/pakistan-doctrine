@@ -4,50 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reports | Pakistan Under Siege</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="../assets/favicon.ico">
+  <link href="../dist/output.css" rel="stylesheet">
+  <style>
+    .gradient-border {
+      border-image: linear-gradient(to right, #10b981, #059669) 1;
+    }
+    .custom-card {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-900 font-serif">
-  <header class="bg-white border-b border-green-600 shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
-      <div class="flex items-center justify-between">
-        <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
-        <!-- Responsive Nav -->
-        <nav class="relative">
-          <button id="nav-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 hover:text-green-800 hover:border-green-800 focus:outline-none" aria-label="Open Menu">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-          <ul id="nav-menu" class="hidden md:flex space-x-2 md:space-x-4 items-center">
-            <li><a href="../index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a></li>
-            <li><a href="../about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a></li>
-            <li><a href="../doctrine.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Doctrine</a></li>
-            <li><a href="../imran-khan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan</a></li>
-            <li class="relative group">
-              <button class="flex items-center text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors focus:outline-none">
-                Regions
-                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 hidden group-hover:block">
-                <li><a href="../regions/balochistan.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Balochistan</a></li>
-                <li><a href="../regions/sindh.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Sindh</a></li>
-                <li><a href="../regions/kp.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">KP</a></li>
-                <li><a href="../regions/gb.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">GB</a></li>
-                <li><a href="../regions/punjab.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Punjab</a></li>
-              </ul>
-            </li>
-            <li><a href="index.html" class="text-green-700 font-bold px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <div id="nav-placeholder"></div>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('hidden');
-      });
+    fetch('/components/nav.html').then(r => r.text()).then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      var s = document.createElement('script');
+      s.src = '/components/nav.js';
+      s.onload = function() { if (typeof initNavDropdown === 'function') initNavDropdown(); };
+      document.body.appendChild(s);
     });
   </script>
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
