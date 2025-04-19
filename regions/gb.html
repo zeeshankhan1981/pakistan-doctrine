@@ -7,15 +7,36 @@
   <link href="../dist/output.css" rel="stylesheet">
   <link rel="icon" href="../assets/favicon.ico">
   <style>
-    .gradient-border {
-      border-image: linear-gradient(to right, #10b981, #059669) 1;
+    .pattern-grid {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .custom-card {
-      background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .shadow-green {
+      box-shadow: 0 4px 14px -3px rgba(5, 150, 105, 0.5);
+    }
+    .shadow-green-lg {
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.25);
+    }
+    .card {
+      @apply bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300;
+    }
+    .pulse-animation {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .8; }
     }
   </style>
 </head>
-<body class="bg-white text-gray-900 font-serif">
+<body class="bg-gray-50 text-gray-900 font-sans">
   <div id="nav-placeholder"></div>
   <script>
     fetch('/components/nav.html').then(r => r.text()).then(html => {
@@ -26,103 +47,429 @@
       document.body.appendChild(s);
     });
   </script>
-  <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12">
-    <div class="text-center mb-16">
-      <h1 class="text-5xl font-extrabold text-green-700 mb-4 tracking-tight">Gilgit-Baltistan: Silenced Voices</h1>
-      <p class="text-2xl text-gray-700 max-w-2xl mx-auto mb-6">
-        Gilgit-Baltistan (GB) has seen a rise in restrictions on freedom of expression and forced displacement. In 2024, at least 35 cases of rights violations were reported, with journalists and activists facing detention and internet shutdowns. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="underline text-green-700" target="_blank">HRW</a>
-      </p>
+
+  <!-- Hero Section with Wave -->
+  <div class="bg-gradient-to-br from-green-800 to-green-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pattern-grid"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-20 relative z-10">
+      <div class="text-center md:max-w-4xl md:mx-auto">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 tracking-tight">
+          Gilgit-Baltistan: <span class="relative inline-block">
+            Silenced <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-green-300 rounded-full transform translate-y-1"></span>
+          </span> Voices
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+          Gilgit-Baltistan (GB) has seen a rise in restrictions on freedom of expression and forced displacement. In 2024, at least 35 cases of rights violations were reported, with journalists and activists facing detention and internet shutdowns.
+        </p>
+        <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="inline-flex items-center text-white bg-green-600 hover:bg-green-700 font-medium rounded-full px-6 py-3 transition duration-300 shadow-green hover:shadow-lg hover:-translate-y-0.5" target="_blank">
+          <span>Human Rights Watch Report</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
     </div>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Recent Incidents (2023–2024)</h2>
-      <div class="space-y-8">
-        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
-          <h3 class="text-xl font-bold text-green-700 mb-2">Freedom of Expression Restrictions</h3>
-          <p class="text-gray-700 mb-2">On 5 April 2023, multiple journalists and activists were detained for social media posts. Reports of internet shutdowns during protests. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="underline text-green-700" target="_blank">HRW</a></p>
+    <!-- Wave divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full h-auto">
+        <path fill="#f9fafb" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,186.7C384,203,480,245,576,261.3C672,277,768,267,864,234.7C960,203,1056,149,1152,138.7C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16">
+    <!-- Recent Incidents Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
         </div>
-        <div class="bg-white rounded-xl border border-gray-200 shadow p-6">
-          <h3 class="text-xl font-bold text-green-700 mb-2">Forced Displacement in Skardu</h3>
-          <p class="text-gray-700 mb-2">On 28 June 2023, hundreds of families were forcibly displaced due to military operations. Reports of property destruction. <a href="https://hrcp.org.pk/reports/2023-skardu" class="underline text-green-700" target="_blank">HRCP</a></p>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Recent Incidents (2023–2024)</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+          <div class="flex items-center mb-3">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-700">Freedom of Expression Restrictions</h3>
+          </div>
+          <p class="text-gray-700 mb-3">On 5 April 2023, multiple journalists and activists were detained for social media posts. Reports of internet shutdowns during protests.</p>
+          <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline" target="_blank">
+            <span>Human Rights Watch</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+          <div class="flex items-center mb-3">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-700">Forced Displacement in Skardu</h3>
+          </div>
+          <p class="text-gray-700 mb-3">On 28 June 2023, hundreds of families were forcibly displaced due to military operations. Reports of property destruction.</p>
+          <a href="https://hrcp.org.pk/reports/2023-skardu" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline" target="_blank">
+            <span>Human Rights Commission of Pakistan</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">Detailed Research Findings: Human Rights in Gilgit-Baltistan (2016–2025)</h2>
+
+    <!-- Detailed Research Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Detailed Research Findings: Human Rights in Gilgit-Baltistan (2016–2025)</h2>
+      </div>
+
       <div class="space-y-8">
-        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
-          <h3 class="text-xl font-bold text-blue-700 mb-2">Suppression of Political Rights &amp; Freedom of Expression</h3>
-          <ul class="list-disc list-inside text-gray-700 mb-2">
-            <li>2016–2024: GB excluded from constitutional framework, denied provincial status and National Assembly representation. Protests for rights met with arrests and intimidation. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
-            <li>2016–2024: Journalists, activists, and students detained for social media posts and criticism of authorities. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
-            <li>2023–2024: At least 35 cases of rights violations, including internet shutdowns and anti-terror laws used to silence dissent. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
+        <!-- Political Rights Card -->
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-700">Suppression of Political Rights &amp; Freedom of Expression</h3>
+          </div>
+          <ul class="space-y-3 mb-3">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2016–2024:</span> GB excluded from constitutional framework, denied provincial status and National Assembly representation. Protests for rights met with arrests and intimidation. 
+                <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2016–2024:</span> Journalists, activists, and students detained for social media posts and criticism of authorities. 
+                <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2023–2024:</span> At least 35 cases of rights violations, including internet shutdowns and anti-terror laws used to silence dissent. 
+                <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
-          <h3 class="text-xl font-bold text-blue-700 mb-2">Forced Displacement, Land Rights &amp; Sectarian Tensions</h3>
-          <ul class="list-disc list-inside text-gray-700 mb-2">
-            <li>2016–2024: Military operations in Skardu and Diamer led to forced displacement, property destruction, and protests over land seizures. <a href="https://hrcp.org.pk/reports/2023-skardu" target="_blank" class="underline text-blue-700">Source</a></li>
-            <li>2022–2024: HRCP and Amnesty raised alarm over forced displacement and curbs on dissent. <a href="https://hrcp.org.pk/reports/2023-skardu" target="_blank" class="underline text-blue-700">Source</a></li>
-            <li>2016–2024: Periodic sectarian violence, especially targeting Shia communities. Authorities imposed curfews and restricted processions, citing security. <a href="https://www.dawn.com/news/1728518" target="_blank" class="underline text-blue-700">Source</a></li>
+
+        <!-- Forced Displacement Card -->
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-700">Forced Displacement, Land Rights &amp; Sectarian Tensions</h3>
+          </div>
+          <ul class="space-y-3 mb-3">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2016–2024:</span> Military operations in Skardu and Diamer led to forced displacement, property destruction, and protests over land seizures. 
+                <a href="https://hrcp.org.pk/reports/2023-skardu" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2022–2024:</span> HRCP and Amnesty raised alarm over forced displacement and curbs on dissent. 
+                <a href="https://hrcp.org.pk/reports/2023-skardu" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2016–2024:</span> Periodic sectarian violence, especially targeting Shia communities. Authorities imposed curfews and restricted processions, citing security. 
+                <a href="https://www.dawn.com/news/1728518" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
-          <h3 class="text-xl font-bold text-blue-700 mb-2">Suppression of Civil Society, Education &amp; Language Rights</h3>
-          <ul class="list-disc list-inside text-gray-700 mb-2">
-            <li>2016–2024: NGOs and rights defenders harassed, denied registration, and restricted from peaceful assembly. <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/pakistan/report-pakistan/" target="_blank" class="underline text-blue-700">Source</a></li>
-            <li>2016–2024: Movements for mother-tongue education and local history in curricula face official resistance. <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-blue-700">Source</a></li>
+
+        <!-- Civil Society Card -->
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-700">Suppression of Civil Society, Education &amp; Language Rights</h3>
+          </div>
+          <ul class="space-y-3 mb-3">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2016–2024:</span> NGOs and rights defenders harassed, denied registration, and restricted from peaceful assembly. 
+                <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/pakistan/report-pakistan/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="text-gray-700">
+                <span class="font-medium">2016–2024:</span> Movements for mother-tongue education and local history in curricula face official resistance. 
+                <a href="https://www.hrw.org/news/2023/04/05/gb-expression-restrictions" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Source</a>
+              </span>
+            </li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl border border-blue-200 shadow p-6">
-          <h3 class="text-xl font-bold text-blue-700 mb-2">Survivor Testimonies</h3>
-          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“My son was detained for a Facebook post criticizing the government. We have not been able to contact him for weeks.”<br><span class="text-sm text-gray-500">— Testimony from Gilgit, 2023</span></blockquote>
-          <blockquote class="border-l-4 border-blue-700 pl-4 italic text-gray-600 mb-4 bg-blue-50 p-4 rounded-lg shadow">“Our home in Skardu was demolished during the operation. We are now living in tents.”<br><span class="text-sm text-gray-500">— Displaced resident, Skardu, 2023</span></blockquote>
+
+        <!-- Survivor Testimonies Card -->
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-700">Survivor Testimonies</h3>
+          </div>
+          <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            "My son was detained for a Facebook post criticizing the government. We have not been able to contact him for weeks."
+            <footer class="text-sm text-gray-500 mt-2 font-medium">— Testimony from Gilgit, 2023</footer>
+          </blockquote>
+          <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            "Our home in Skardu was demolished during the operation. We are now living in tents."
+            <footer class="text-sm text-gray-500 mt-2 font-medium">— Displaced resident, Skardu, 2023</footer>
+          </blockquote>
         </div>
       </div>
-      <p class="mt-6 text-base text-gray-600">For full details and citations, see the <a href="/research/pakistan-hrv.md" class="underline text-blue-700">Pakistan Human Rights Violations Research File</a>.</p>
+      
+      <p class="mt-6 text-base text-gray-600">For full details and citations, see the <a href="/research/pakistan-hrv.md" class="text-green-700 hover:text-green-600 hover:underline">Pakistan Human Rights Violations Research File</a>.</p>
     </section>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Timeline of Major Incidents</h2>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
-        <li><strong>2016-2020:</strong> Crackdown on freedom of expression; arrests for social media posts; forced displacement in Skardu. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-green-700">Source</a></li>
-        <li><strong>2021:</strong> Internet shutdowns and arrests of journalists for online speech. <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" target="_blank" class="underline text-green-700">Source</a></li>
-        <li><strong>2022:</strong> HRCP and Amnesty raised alarm over forced displacement and curbs on dissent. <a href="https://hrcp.org.pk/reports/2023-skardu" target="_blank" class="underline text-green-700">Source</a></li>
-      </ul>
+
+    <!-- Timeline Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Timeline of Major Incidents</h2>
+      </div>
+      
+      <div class="relative border-l-2 border-green-600 pl-8 ml-4 space-y-8">
+        <div class="relative">
+          <div class="absolute -left-10 mt-1.5 h-6 w-6 rounded-full bg-green-600 shadow-md flex items-center justify-center">
+            <span class="text-white font-bold text-xs">16</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-green-700 mb-2">2016-2020</h3>
+          <p class="text-gray-700 mb-2">Crackdown on freedom of expression; arrests for social media posts; forced displacement in Skardu.</p>
+          <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline" target="_blank">
+            <span>Source</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute -left-10 mt-1.5 h-6 w-6 rounded-full bg-green-600 shadow-md flex items-center justify-center">
+            <span class="text-white font-bold text-xs">21</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-green-700 mb-2">2021</h3>
+          <p class="text-gray-700 mb-2">Internet shutdowns and arrests of journalists for online speech.</p>
+          <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline" target="_blank">
+            <span>Source</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute -left-10 mt-1.5 h-6 w-6 rounded-full bg-green-600 shadow-md flex items-center justify-center">
+            <span class="text-white font-bold text-xs">22</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-green-700 mb-2">2022</h3>
+          <p class="text-gray-700 mb-2">HRCP and Amnesty raised alarm over forced displacement and curbs on dissent.</p>
+          <a href="https://hrcp.org.pk/reports/2023-skardu" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline" target="_blank">
+            <span>Source</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Key Statistics</h2>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
-        <li>Multiple internet shutdowns and dozens of arrests for online speech in recent years.</li>
-        <li>Dozens of families forcibly displaced in Skardu and other areas.</li>
-        <li>GB journalists and activists frequently targeted for dissent.</li>
-      </ul>
+
+    <!-- Key Statistics Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Key Statistics</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300 text-center">
+          <div class="text-4xl font-bold text-green-700 mb-2">Multiple</div>
+          <p class="text-gray-700">Internet shutdowns and dozens of arrests for online speech in recent years</p>
+        </div>
+        
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300 text-center">
+          <div class="text-4xl font-bold text-green-700 mb-2">Dozens</div>
+          <p class="text-gray-700">Families forcibly displaced in Skardu and other areas</p>
+        </div>
+        
+        <div class="card p-6 hover:shadow-green-lg transition-all duration-300 text-center">
+          <div class="text-4xl font-bold text-green-700 mb-2">Targeted</div>
+          <p class="text-gray-700">GB journalists and activists frequently targeted for dissent</p>
+        </div>
+      </div>
     </section>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">International Responses</h2>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
-        <li>HRW and HRCP condemned restrictions on expression and forced displacement in GB.</li>
-        <li>Amnesty International and UN agencies called for protection of journalists and activists.</li>
-      </ul>
+
+    <!-- International Responses Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">International Responses</h2>
+      </div>
+      
+      <div class="card p-6 hover:shadow-green-lg transition-all duration-300 mb-6">
+        <ul class="space-y-3 mb-3">
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span class="text-gray-700">
+              HRW and HRCP condemned restrictions on expression and forced displacement in GB.
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span class="text-gray-700">
+              Amnesty International and UN agencies called for protection of journalists and activists.
+            </span>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Category Breakdown</h2>
-      <div id="categoryBreakdown" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+
+    <!-- Category Breakdown Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Category Breakdown</h2>
+      </div>
+      
+      <div id="categoryBreakdown" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Will be populated by script -->
+      </div>
     </section>
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Survivor Testimony</h2>
-      <blockquote class="border-l-4 border-green-700 pl-4 italic text-gray-600 mb-4 bg-green-50 p-4 rounded-lg shadow">“When the internet was cut, we felt completely isolated. My father was arrested for a Facebook post. We are afraid to speak out.”<br><span class="text-sm text-gray-500">— Journalist, Gilgit, 2023 (HRW)</span></blockquote>
+
+    <!-- Survivor Testimony Section -->
+    <section class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Survivor Testimony</h2>
+      </div>
+      
+      <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+        "When the internet was cut, we felt completely isolated. My father was arrested for a Facebook post. We are afraid to speak out."
+        <footer class="text-sm text-gray-500 mt-2 font-medium">— Journalist, Gilgit, 2023 (HRW)</footer>
+      </blockquote>
     </section>
+
+    <!-- Reports Section -->
     <section>
-      <h2 class="text-3xl font-bold text-green-700 mb-8">Reports & Further Reading</h2>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
-        <li><a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="underline text-green-700" target="_blank">HRW: Freedom of Expression in GB (2023)</a></li>
-        <li><a href="https://hrcp.org.pk/reports/2023-skardu" class="underline text-green-700" target="_blank">HRCP: Forced Displacement in Skardu (2023)</a></li>
-      </ul>
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Reports & Further Reading</h2>
+      </div>
+      
+      <div class="card p-6 hover:shadow-green-lg transition-all duration-300">
+        <ul class="space-y-3 mb-3">
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <a href="https://hrw.org/news/2023/04/05/gb-expression-restrictions" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">
+              HRW: Freedom of Expression in GB (2023)
+            </a>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <a href="https://hrcp.org.pk/reports/2023-skardu" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">
+              HRCP: Forced Displacement in Skardu (2023)
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <footer class="text-center py-8 border-t border-green-600 bg-white text-base text-gray-500 font-serif shadow-lg mt-16">
-    <span class="block text-green-700 font-bold font-serif text-xl">&copy; 2025 Pakistan Under Siege</span>
-    <span class="block mt-1 text-gray-500">All rights reserved.</span>
+  <footer class="bg-gradient-to-br from-green-900 to-green-800 text-white py-12 mt-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="text-center">
+        <span class="block text-white font-bold font-serif text-2xl mb-2">&copy; 2025 Pakistan Under Siege</span>
+        <span class="block text-green-200">All rights reserved.</span>
+      </div>
+    </div>
   </footer>
   <script src="../scripts/region.js"></script>
 </body>

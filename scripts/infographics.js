@@ -132,26 +132,36 @@ document.addEventListener('DOMContentLoaded', async function () {
   // === Terrorism & Fatalities ===
   try {
     const terrorism = await fetchJson('data/terrorism.json');
-    if (!terrorism || !terrorism.years || !terrorism.incidents || !terrorism.fatalities) {
-      throw new Error('Missing terrorism data fields');
+    if (!terrorism) {
+      throw new Error('Terrorism data not found');
     }
+    
+    // Ensure all required properties exist
+    const years = terrorism.years || [];
+    const incidents = terrorism.incidents || [];
+    const fatalities = terrorism.fatalities || [];
+    const sources = terrorism.sources || [];
+    
     const terrorismCanvas = document.getElementById('terrorismChart');
-    if (!terrorismCanvas) throw new Error('terrorismChart canvas not found');
+    if (!terrorismCanvas) {
+      throw new Error('terrorismChart canvas not found');
+    }
+    
     const terrorismCtx = terrorismCanvas.getContext('2d');
     const terrorismChart = new Chart(terrorismCtx, {
       type: 'bar',
       data: {
-        labels: terrorism.years,
+        labels: years,
         datasets: [
           {
             label: 'Incidents',
-            data: terrorism.incidents,
+            data: incidents,
             backgroundColor: '#059669',
             borderRadius: 6
           },
           {
             label: 'Fatalities',
-            data: terrorism.fatalities,
+            data: fatalities,
             backgroundColor: '#ef4444',
             borderRadius: 6
           }
@@ -159,17 +169,29 @@ document.addEventListener('DOMContentLoaded', async function () {
       },
       options: {
         responsive: true,
-        plugins: { legend: { display: true }, title: { display: false } },
+        plugins: { 
+          legend: { display: true }, 
+          title: { display: false } 
+        },
         scales: {
-          y: { beginAtZero: true, ticks: { color: '#374151', font: { family: 'serif' } } },
-          x: { ticks: { color: '#374151', font: { family: 'serif' } } }
+          y: { beginAtZero: true, ticks: { color: '#374151', font: { family: 'sans-serif' } } },
+          x: { ticks: { color: '#374151', font: { family: 'sans-serif' } } }
         }
       }
     });
-    renderSources('terrorismChart', terrorism.sources);
+    renderSources('terrorismChart', sources);
     addShareDownloadButtons('terrorismChart', terrorismChart, 'Terrorism and Fatalities');
   } catch (e) {
-    console.error('Terrorism chart error:', e, JSON.stringify(e));
+    console.error('Terrorism chart error:', e);
+    // Display fallback message in the chart area
+    const errorContainer = document.getElementById('terrorismChart');
+    if (errorContainer) {
+      errorContainer.style.display = 'none';
+      const errorMsg = document.createElement('div');
+      errorMsg.className = 'p-4 bg-red-50 text-red-700 rounded-md text-center';
+      errorMsg.innerHTML = 'Unable to load terrorism data. <button class="underline" onclick="location.reload()">Reload</button>';
+      errorContainer.parentNode.appendChild(errorMsg);
+    }
   }
 
   // === Protest Crackdowns & Arrests ===

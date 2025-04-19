@@ -1,32 +1,229 @@
-<header class="bg-white border-b border-green-600 shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4">
-    <div class="flex items-center justify-between">
-      <h1 class="text-3xl font-extrabold tracking-tight text-green-600 drop-shadow-sm">Pakistan Under Siege</h1>
-      <nav class="relative">
-        <button id="nav-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700 hover:text-green-800 hover:border-green-800 focus:outline-none" aria-label="Open Menu">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-green-100 transition-all duration-300 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/index.html" class="group flex items-center space-x-3">
+        <div class="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:scale-105">
+          <span class="text-white font-serif font-extrabold text-lg">P</span>
+        </div>
+        <h1 class="text-2xl md:text-2xl font-serif font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-900 group-hover:from-green-800 group-hover:to-green-700 transition-all duration-300">Pakistan Under Siege</h1>
+      </a>
+
+      <!-- Mobile menu button -->
+      <div class="flex md:hidden">
+        <button id="nav-toggle" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-green-700 hover:text-green-900 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
-        <ul id="nav-menu" class="hidden md:flex space-x-2 md:space-x-4 items-center">
-          <li><a href="/index.html" class="text-green-700 font-bold px-4 py-2 rounded-lg text-base font-medium transition-colors">Home</a></li>
-          <li><a href="/about.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">About</a></li>
-          <li><a href="/doctrine.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Doctrine</a></li>
-          <li><a href="/imran-khan.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Imran Khan</a></li>
-          <li class="relative group">
-            <button class="flex items-center text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors focus:outline-none">
-              Regions
-              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <ul id="region-dropdown" class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20 hidden" tabindex="0">
-              <li><a href="/regions/balochistan.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Balochistan</a></li>
-              <li><a href="/regions/sindh.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Sindh</a></li>
-              <li><a href="/regions/kp.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">KP</a></li>
-              <li><a href="/regions/gb.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">GB</a></li>
-              <li><a href="/regions/punjab.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700">Punjab</a></li>
-            </ul>
+      </div>
+
+      <!-- Desktop menu -->
+      <nav class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
+        <ul id="nav-menu" class="flex items-center space-x-1 lg:space-x-2">
+          <li>
+            <a href="/index.html" class="flex items-center px-3 py-2 text-sm font-medium text-green-800 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition-all duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Home
+            </a>
           </li>
-          <li><a href="/reports/index.html" class="text-gray-700 hover:text-green-600 px-4 py-2 rounded-lg text-base font-medium transition-colors">Reports</a></li>
+          <li>
+            <a href="/updates-2025.html" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition-all duration-200 relative">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              2025 Updates
+              <span class="absolute -top-1 -right-1 flex h-4 w-4">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-red-500 text-xs text-white justify-center items-center">!</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/about.html" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition-all duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/doctrine.html" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition-all duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Doctrine
+            </a>
+          </li>
+          <li>
+            <a href="/imran-khan.html" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition-all duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              Imran Khan
+            </a>
+          </li>
+          <li class="relative group">
+            <button class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-green-600 border-b-2 border-transparent group-hover:border-green-600 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Regions
+              <svg class="ml-1 h-4 w-4 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute left-0 mt-1 transform opacity-0 scale-95 hidden group-hover:block group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 z-50">
+              <ul id="region-dropdown" class="py-1 w-48 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                <li>
+                  <a href="/regions/balochistan.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700">
+                    <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+                    Balochistan
+                  </a>
+                </li>
+                <li>
+                  <a href="/regions/sindh.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700">
+                    <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+                    Sindh
+                  </a>
+                </li>
+                <li>
+                  <a href="/regions/kp.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700">
+                    <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+                    KP
+                  </a>
+                </li>
+                <li>
+                  <a href="/regions/gb.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700">
+                    <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+                    GB
+                  </a>
+                </li>
+                <li>
+                  <a href="/regions/punjab.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700">
+                    <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+                    Punjab
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/reports/index.html" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition-all duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Reports
+            </a>
+          </li>
+          <li>
+            <a href="#" class="ml-3 flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Take Action
+            </a>
+          </li>
         </ul>
       </nav>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="/index.html" class="flex items-center text-green-700 hover:bg-green-50 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        Home
+      </a>
+      
+      <a href="/updates-2025.html" class="flex items-center text-gray-600 hover:bg-green-50 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        2025 Updates
+        <span class="absolute right-3 top-1/2 -translate-y-1/2 flex h-4 w-4">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-4 w-4 bg-red-500 text-xs text-white justify-center items-center">!</span>
+        </span>
+      </a>
+      
+      <a href="/about.html" class="flex items-center text-gray-600 hover:bg-green-50 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        About
+      </a>
+      
+      <a href="/doctrine.html" class="flex items-center text-gray-600 hover:bg-green-50 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Doctrine
+      </a>
+      
+      <a href="/imran-khan.html" class="flex items-center text-gray-600 hover:bg-green-50 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        Imran Khan
+      </a>
+      
+      <div x-data="{ open: false }">
+        <button type="button" class="flex items-center justify-between w-full text-gray-600 hover:bg-green-50 hover:text-green-900 px-3 py-2 rounded-md text-base font-medium" id="mobile-regions-button" aria-expanded="false" aria-haspopup="true">
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Regions
+          </div>
+          <svg class="h-5 w-5 mobile-menu-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        
+        <div class="mobile-regions-dropdown hidden px-4 py-2 bg-gray-50 rounded-md mt-1 space-y-1">
+          <a href="/regions/balochistan.html" class="flex items-center text-gray-600 hover:text-green-700 block px-3 py-2 rounded-md text-sm font-medium">
+            <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+            Balochistan
+          </a>
+          <a href="/regions/sindh.html" class="flex items-center text-gray-600 hover:text-green-700 block px-3 py-2 rounded-md text-sm font-medium">
+            <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+            Sindh
+          </a>
+          <a href="/regions/kp.html" class="flex items-center text-gray-600 hover:text-green-700 block px-3 py-2 rounded-md text-sm font-medium">
+            <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+            KP
+          </a>
+          <a href="/regions/gb.html" class="flex items-center text-gray-600 hover:text-green-700 block px-3 py-2 rounded-md text-sm font-medium">
+            <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+            GB
+          </a>
+          <a href="/regions/punjab.html" class="flex items-center text-gray-600 hover:text-green-700 block px-3 py-2 rounded-md text-sm font-medium">
+            <span class="h-2 w-2 rounded-full bg-green-600 mr-2"></span>
+            Punjab
+          </a>
+        </div>
+      </div>
+      
+      <a href="/reports/index.html" class="flex items-center text-gray-600 hover:bg-green-50 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Reports
+      </a>
+      
+      <a href="#" class="flex items-center justify-center bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 mt-4 rounded-lg shadow-md hover:from-green-700 hover:to-green-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        Take Action
+      </a>
     </div>
   </div>
 </header>
