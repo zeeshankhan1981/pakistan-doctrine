@@ -79,7 +79,7 @@
 
   <main class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16">
     <!-- Early Life Section -->
-    <section class="mb-20">
+    <section class="mb-20" id="early-life">
       <div class="flex items-center mb-10">
         <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,12 +90,23 @@
       </div>
       
       <div class="card p-6 hover:shadow-green-lg transition-all duration-300 mb-6">
-        <p class="text-gray-700 mb-6 leading-relaxed">Born in 1952 in Lahore, Imran Khan was educated at Aitchison College, Lahore, and later at Oxford University. He led Pakistan to its first Cricket World Cup victory in 1992, becoming a national hero and global sports icon.</p>
-        
-        <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-          "Compromise for your dream, but never compromise on your dream."
-          <footer class="text-sm text-gray-500 mt-2 font-medium">— Imran Khan</footer>
-        </blockquote>
+        <div class="flex flex-col lg:flex-row gap-8 mb-6">
+          <div class="lg:w-1/2">
+            <p class="text-gray-700 mb-6 leading-relaxed">Born on October 5, 1952, in Lahore, Imran Khan was educated at Aitchison College, the Royal Grammar School Worcester, and Keble College, Oxford (Politics, Philosophy, and Economics). He led Pakistan to its first Cricket World Cup victory in 1992, becoming a national hero and global sports icon.</p>
+            
+            <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              "Compromise for your dream, but never compromise on your dream."
+              <footer class="text-sm text-gray-500 mt-2 font-medium">— Imran Khan</footer>
+            </blockquote>
+          </div>
+          
+          <div class="lg:w-1/2 flex flex-col items-center justify-center">
+            <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-3 max-w-md">
+              <img src="/assets/images/imran-khan/1992-world-cup.jpg" alt="Imran Khan with Cricket World Cup Trophy, 1992" class="w-full h-auto object-cover bg-gray-100">
+            </div>
+            <p class="text-sm text-gray-600 text-center">Imran Khan holding the Cricket World Cup trophy after Pakistan's historic victory - March 25, 1992</p>
+          </div>
+        </div>
         
         <p class="text-sm text-gray-600">Source: 
           <a href="https://www.espncricinfo.com/story/imran-khan-profile-426348" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline" target="_blank">
@@ -109,7 +120,7 @@
     </section>
 
     <!-- Philanthropy Section -->
-    <section class="mb-20">
+    <section class="mb-20" id="philanthropy">
       <div class="flex items-center mb-10">
         <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,33 +131,44 @@
       </div>
       
       <div class="card p-6 hover:shadow-green-lg transition-all duration-300 mb-6">
-        <p class="text-gray-700 mb-6 leading-relaxed">After retiring from cricket, Imran Khan founded the Shaukat Khanum Memorial Cancer Hospital & Research Centre, Pakistan's first charity cancer hospital, and Namal University, providing quality education in rural Punjab.</p>
-        
-        <ul class="space-y-3 mb-3">
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">Shaukat Khanum Hospital (est. 1994):</span> Treated over 75% of patients free of cost. 
-              <a href="https://shaukatkhanum.org.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Official Site</a>
-            </span>
-          </li>
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">Namal University (est. 2008):</span> Bringing world-class education to underprivileged youth. 
-              <a href="https://www.namal.edu.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Official Site</a>
-            </span>
-          </li>
-        </ul>
+        <div class="flex flex-col lg:flex-row gap-8 mb-6">
+          <div class="lg:w-1/2">
+            <p class="text-gray-700 mb-6 leading-relaxed">After retiring from cricket, Imran Khan founded the Shaukat Khanum Memorial Cancer Hospital & Research Centre in 1994, Pakistan's first charity cancer hospital built in memory of his mother who died of cancer. He later established Namal University in 2008 in his ancestral district of Mianwali, providing quality education in rural Punjab.</p>
+            
+            <ul class="space-y-3 mb-3">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Shaukat Khanum Hospital:</span> Treated over 75% of patients free of cost. 
+                  <a href="https://shaukatkhanum.org.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Official Site</a>
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Namal University:</span> Bringing world-class education to underprivileged youth. 
+                  <a href="https://www.namal.edu.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Official Site</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="lg:w-1/2 flex flex-col items-center justify-center">
+            <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-3 max-w-md">
+              <img src="/assets/images/imran-khan/shaukat-khanum.jpg" alt="Imran Khan at Shaukat Khanum Memorial Cancer Hospital" class="w-full h-auto object-cover bg-gray-100">
+            </div>
+            <p class="text-sm text-gray-600 text-center">Imran Khan at Shaukat Khanum Memorial Cancer Hospital, which he founded in memory of his mother</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Political Struggle Section -->
-    <section class="mb-20">
+    <section class="mb-20" id="political-journey">
       <div class="flex items-center mb-10">
         <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -157,41 +179,120 @@
       </div>
       
       <div class="card p-6 hover:shadow-green-lg transition-all duration-300 mb-6">
-        <p class="text-gray-700 mb-6 leading-relaxed">Imran Khan founded Pakistan Tehreek-e-Insaf (PTI) in 1996, facing decades of political adversity and ridicule. His unwavering commitment to justice, anti-corruption, and the rule of law resonated with millions. In 2018, he became the 22nd Prime Minister of Pakistan, championing social protection programs and advocating for an independent foreign policy.</p>
-        
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">Ehsaas Program:</span> Direct relief to 15+ million families. 
-              <a href="https://www.ehsaas.gov.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Ehsaas Portal</a>
-            </span>
-          </li>
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">Sehat Sahulat:</span> Universal health coverage for 27 million households. 
-              <a href="https://www.pass.gov.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Social Protection</a>
-            </span>
-          </li>
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">TIME 100 Most Influential People (2019).</span> 
-              <a href="https://time.com/collection/100-most-influential-people-2019/5567757/imran-khan/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">TIME</a>
-            </span>
-          </li>
-        </ul>
+        <div class="flex flex-col lg:flex-row gap-8 mb-6">
+          <div class="lg:w-1/2">
+            <p class="text-gray-700 mb-6 leading-relaxed">Imran Khan founded Pakistan Tehreek-e-Insaf (PTI) in 1996, facing decades of political adversity and ridicule. His unwavering commitment to justice, anti-corruption, and the rule of law resonated with millions, culminating in the historic October 2011 jalsa at Minar-e-Pakistan that marked PTI's political breakthrough. In 2018, he became the 22nd Prime Minister of Pakistan, championing social protection programs and advocating for an independent foreign policy.</p>
+            
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">PTI Formation (1996):</span> From small beginnings to a major political force
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Ehsaas Program:</span> Direct relief to 15+ million families. 
+                  <a href="https://www.ehsaas.gov.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Ehsaas Portal</a>
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Sehat Sahulat:</span> Universal health coverage for 27 million households. 
+                  <a href="https://www.pass.gov.pk/" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Social Protection</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="lg:w-1/2 flex flex-col items-center justify-center">
+            <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-3 max-w-md">
+              <img src="/assets/images/imran-khan/oath-ceremony.jpg" alt="Imran Khan takes oath as Prime Minister of Pakistan" class="w-full h-auto object-cover bg-gray-100">
+            </div>
+            <p class="text-sm text-gray-600 text-center">Imran Khan being sworn in as the 22nd Prime Minister of Pakistan - August 18, 2018</p>
+          </div>
+        </div>
         
         <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
           "You only lose when you give up."
           <footer class="text-sm text-gray-500 mt-2 font-medium">— Imran Khan</footer>
+        </blockquote>
+        
+        <p class="text-sm text-gray-600">
+          <span class="font-medium">Recognition:</span>
+          <a href="https://time.com/collection/100-most-influential-people-2019/5567757/imran-khan/" class="inline-flex items-center text-green-700 hover:text-green-600 hover:underline ml-1" target="_blank">
+            TIME 100 Most Influential People (2019)
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </section>
+    
+    <!-- Post-Premiership Challenges Section -->
+    <section class="mb-20" id="post-premiership">
+      <div class="flex items-center mb-10">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-green-800">Post-Premiership Challenges (2022-Present)</h2>
+      </div>
+      
+      <div class="card p-6 hover:shadow-green-lg transition-all duration-300 mb-6">
+        <div class="flex flex-col lg:flex-row gap-8 mb-6">
+          <div class="lg:w-1/2">
+            <p class="text-gray-700 mb-6 leading-relaxed">Following his removal from office through a parliamentary no-confidence vote in April 2022, Imran Khan faced numerous challenges including legal cases, arrests, and imprisonment. Despite being banned from politics and media with suppression of his party, he continues to maintain widespread popular support.</p>
+            
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Mass Mobilization:</span> Led nationwide protests calling for early elections
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Legal Challenges:</span> Faced numerous cases including allegations related to the Toshakhana case
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Continued Support:</span> Maintained significant popular support despite political repression
+                </span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="lg:w-1/2 flex flex-col items-center justify-center">
+            <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-3 max-w-md">
+              <img src="/assets/images/imran-khan/post-attempt.jpg" alt="Imran Khan addressing supporters with bandaged hand after assassination attempt" class="w-full h-auto object-cover bg-gray-100">
+            </div>
+            <p class="text-sm text-gray-600 text-center">Imran Khan addressing supporters after surviving an assassination attempt - November 2022</p>
+          </div>
+        </div>
+        
+        <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+          "When you are on the path of truth and justice, you have to face difficulties. This is the price of struggling for real independence."
+          <footer class="text-sm text-gray-500 mt-2 font-medium">— Imran Khan, 2023</footer>
         </blockquote>
       </div>
     </section>
@@ -218,7 +319,7 @@
     </section>
 
     <!-- International Recognition Section -->
-    <section class="mb-20">
+    <section class="mb-20" id="international-recognition">
       <div class="flex items-center mb-10">
         <div class="h-12 w-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center shadow-green text-white mr-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -229,23 +330,52 @@
       </div>
       
       <div class="card p-6 hover:shadow-green-lg transition-all duration-300 mb-6">
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">UNGA Speech (2019):</span> Advocated for Kashmir, Islamophobia, and global justice. 
-              <a href="https://www.youtube.com/watch?v=Qd2uQ9A8TnE" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Watch</a>
-            </span>
-          </li>
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-gray-700">
-              <span class="font-medium">Global humanitarian and peace advocate.</span>
-            </span>
+        <div class="flex flex-col lg:flex-row gap-8 mb-6">
+          <div class="lg:w-1/2">
+            <p class="text-gray-700 mb-6 leading-relaxed">Imran Khan gained international recognition through his advocacy for global issues, particularly during his historic speech at the United Nations General Assembly in 2019. He prominently raised the Kashmir issue, denounced Islamophobia, and advocated for global peace and rule of law. His international advocacy also led to the UN Resolution A/RES/76/254 (2022) designating March 15 as the International Day to Combat Islamophobia, sponsored by Pakistan under his leadership.</p>
+            
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">UNGA Speech (2019):</span> Advocated for Kashmir, Islamophobia, and global justice. 
+                  <a href="https://www.youtube.com/watch?v=Qd2uQ9A8TnE" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">Watch</a>
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">UN Resolution on Islamophobia:</span> UN General Assembly adopted Resolution A/RES/76/254 (2022) designating March 15 as the International Day to Combat Islamophobia. 
+                  <a href="https://www.un.org/press/en/2022/ga12440.doc.htm" class="text-green-700 hover:text-green-600 hover:underline" target="_blank">UN Press</a>
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-700">
+                  <span class="font-medium">Climate Action Recognition:</span> The Billion Tree Tsunami project gained global acknowledgment for Pakistan's role in reforestation and climate action.
+                </span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="lg:w-1/2 flex flex-col items-center justify-center">
+            <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mb-3 max-w-md">
+              <img src="https://www.thenews.com.pk/assets/uploads/updates/2019-09-27/534229_5042944_updates.jpg" alt="Imran Khan addressing the United Nations General Assembly" class="w-full h-auto object-cover">
+            </div>
+            <p class="text-sm text-gray-600 text-center">Imran Khan addressing the United Nations General Assembly - September 27, 2019</p>
+          </div>
+        </div>
+        
+        <blockquote class="border-l-4 border-green-600 pl-4 italic text-gray-700 mb-4 bg-green-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+          "Islamophobia since 9/11 has grown at an alarming pace. Terrorism has nothing to do with any religion. No religion preaches radicalism."
+          <footer class="text-sm text-gray-500 mt-2 font-medium">— Imran Khan, UNGA Speech 2019</footer>
+        </blockquote>
           </li>
         </ul>
         
@@ -253,6 +383,15 @@
           "We stand with the oppressed everywhere, from Kashmir to Palestine."
           <footer class="text-sm text-gray-500 mt-2 font-medium">— Imran Khan, 2024</footer>
         </blockquote>
+        
+        <div class="mt-4 flex items-center justify-center md:justify-start">
+          <a href="/research/khan-history-doctrine.md" class="inline-flex items-center text-green-700 hover:text-green-600 font-medium hover:underline bg-green-50 hover:bg-green-100 px-4 py-2 rounded-lg transition-all duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            View Comprehensive Research Document
+          </a>
+        </div>
       </div>
     </section>
 

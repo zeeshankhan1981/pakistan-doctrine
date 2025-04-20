@@ -7,10 +7,21 @@ function initNavDropdown() {
   const mobileMenu = document.getElementById('mobile-menu');
   
   if (navToggle && mobileMenu) {
+    // Ensure mobile menu is initially hidden
+    mobileMenu.classList.add('hidden');
+    
     navToggle.addEventListener('click', function() {
       const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !expanded);
-      mobileMenu.classList.toggle('hidden');
+      
+      // Toggle aria-expanded attribute
+      navToggle.setAttribute('aria-expanded', !expanded ? 'true' : 'false');
+      
+      // Toggle mobile menu visibility
+      if (expanded) {
+        mobileMenu.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+      }
       
       // Change icon from hamburger to X when open (optional enhancement)
       const icon = navToggle.querySelector('svg');
@@ -30,10 +41,21 @@ function initNavDropdown() {
   const mobileMenuArrow = document.querySelector('.mobile-menu-arrow');
   
   if (mobileRegionsButton && mobileRegionsDropdown) {
-    mobileRegionsButton.addEventListener('click', function() {
+    // Ensure dropdown is initially hidden
+    mobileRegionsDropdown.classList.add('hidden');
+    
+    mobileRegionsButton.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default button behavior
+      
       const expanded = mobileRegionsButton.getAttribute('aria-expanded') === 'true';
-      mobileRegionsButton.setAttribute('aria-expanded', !expanded);
-      mobileRegionsDropdown.classList.toggle('hidden');
+      mobileRegionsButton.setAttribute('aria-expanded', !expanded ? 'true' : 'false');
+      
+      // Toggle dropdown visibility
+      if (expanded) {
+        mobileRegionsDropdown.classList.add('hidden');
+      } else {
+        mobileRegionsDropdown.classList.remove('hidden');
+      }
       
       // Rotate arrow
       if (mobileMenuArrow) {
@@ -45,8 +67,9 @@ function initNavDropdown() {
   // Desktop regions dropdown
   const regionMenu = document.querySelector('li.group');
   const regionDropdown = document.querySelector('.group > div > ul');
+  const regionDropdownWrapper = document.querySelector('.group > div');
   
-  if (regionMenu && regionDropdown) {
+  if (regionMenu && regionDropdown && regionDropdownWrapper) {
     let dropdownTimeout;
     const regionButton = regionMenu.querySelector('button');
     
@@ -56,13 +79,30 @@ function initNavDropdown() {
       regionButton.setAttribute('aria-expanded', 'false');
     }
     
+    // Click event for mobile compatibility
+    regionButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isExpanded = regionButton.getAttribute('aria-expanded') === 'true';
+      
+      if (isExpanded) {
+        regionButton.setAttribute('aria-expanded', 'false');
+        regionDropdownWrapper.classList.add('invisible', 'opacity-0', 'scale-95');
+        regionDropdownWrapper.classList.remove('visible', 'opacity-100', 'scale-100');
+      } else {
+        regionButton.setAttribute('aria-expanded', 'true');
+        regionDropdownWrapper.classList.remove('invisible', 'opacity-0', 'scale-95');
+        regionDropdownWrapper.classList.add('visible', 'opacity-100', 'scale-100');
+      }
+    });
+    
     // Mouse events with improved UX
     regionMenu.addEventListener('mouseenter', function() {
       clearTimeout(dropdownTimeout);
       if (regionButton) {
         regionButton.setAttribute('aria-expanded', 'true');
       }
-      // Don't need to remove 'hidden' class as we're using CSS display logic
+      regionDropdownWrapper.classList.remove('invisible', 'opacity-0', 'scale-95');
+      regionDropdownWrapper.classList.add('visible', 'opacity-100', 'scale-100');
     });
     
     regionMenu.addEventListener('mouseleave', function() {
@@ -70,6 +110,8 @@ function initNavDropdown() {
         if (regionButton) {
           regionButton.setAttribute('aria-expanded', 'false');
         }
+        regionDropdownWrapper.classList.add('invisible', 'opacity-0', 'scale-95');
+        regionDropdownWrapper.classList.remove('visible', 'opacity-100', 'scale-100');
       }, 150);
     });
     
