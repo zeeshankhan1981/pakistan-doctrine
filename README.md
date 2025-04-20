@@ -26,17 +26,32 @@ This website aims to provide a clear, impactful, and accessible record of human 
 
 - Region-specific pages with detailed documentation
 - Timeline of events
-- Search functionality
 - Reports and documentation
 - Responsive design for all devices
+- **Democracy Under Siege Tracker** (2022–2025)
+- **Democracy Health Index** chart with severity bands
+- Critical alert banners for major incidents
+- Search functionality
+
+## New in 2025: Democracy Under Siege Tracker
+
+**Democracy Under Siege Tracker (2022–2025):**
+- The homepage now features a comprehensive timeline and tracker documenting the erosion of democracy in Pakistan from April 2022 to April 2025.
+- Includes a visual timeline of major incidents (protests, crackdowns, censorship, election fraud, enforced disappearances, and attacks on press freedom) with severity ratings and sources.
+- Features the **Democracy Health Index**: a Chart.js-powered interactive line chart visualizing the decline in democratic health (0–100 scale) over time, with color-coded severity bands and event highlights.
+- All timeline events and index data are research-backed and transparently sourced. See `scripts/infographics.js` for implementation details.
+
+**Critical Alert System:**
+- Prominent alert banners and severity indicators highlight critical threats to democracy and human rights.
 
 ## Visual Design
 
 The site features a documentary-style aesthetic with:
-- Black and white color scheme with green accents
+- Black and white color scheme with green and red accents
 - Bold sans-serif headers and elegant serif body text
 - Dramatic section dividers
 - Card-based layout for incidents and reports
+- Interactive charts and infographics
 
 ## Getting Started
 
@@ -62,6 +77,12 @@ git clone https://github.com/zeeshankhan1981/pakistan-under-siege.git
 1. Place PDF reports in the `reports` directory
 2. Update the region page with a link to the new report
 
+## Maintaining the Democracy Tracker & Index
+
+- To update the timeline or index, edit the relevant section in `index.html` and update the data arrays in `scripts/infographics.js`.
+- Always cite reputable sources for new events or index changes.
+- Severity ratings and color codes should follow the legend in the homepage tracker.
+
 ## Contributing
 
 Please follow these guidelines when contributing:
@@ -78,8 +99,9 @@ All rights reserved. Contact the project maintainer for permission to use the co
 
 - `index.html`: Home page
 - `about.html`: About the project
-- `style/main.css`: (Tailwind via CDN, this file optional)
+- `style/main.css`: (Tailwind built locally, this file optional)
 - `scripts/search.js`: Lunr.js search logic
+- `scripts/infographics.js`: Chart.js logic for Democracy Health Index and other infographics
 - `data/violations.json`: Human rights violations data
 - `regions/`: Pages for Balochistan, Sindh, KP, GB, Punjab
 - `reports/`: PDF reports
@@ -98,7 +120,7 @@ All rights reserved. Contact the project maintainer for permission to use the co
 
 ## Tech Stack
 
-- HTML5, TailwindCSS (CDN), Vanilla JS, Lunr.js, Markdown/JSON for content
+- HTML5, TailwindCSS (built locally), Vanilla JS, Chart.js, Lunr.js, Markdown/JSON for content
 
 ## License
 
