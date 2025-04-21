@@ -6,12 +6,30 @@
   <title>About | Pakistan Under Siege</title>
   <link rel="icon" href="assets/favicon.ico">
   <link href="dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .gradient-border {
-      border-image: linear-gradient(to right, #10b981, #059669) 1;
+    body {
+      font-family: 'Inter', 'Roboto Slab', serif;
+    }
+    .section-title {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: #047857;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 12px rgba(16,185,129,0.07);
     }
     .custom-card {
-      background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.08), rgba(5, 150, 105, 0.08));
+      border-radius: 1.25rem;
+      border: 1px solid #d1fae5;
+      box-shadow: 0 4px 24px -4px rgba(16,185,129,0.07);
+    }
+    .gradient-border {
+      border-image: linear-gradient(to right, #10b981, #059669) 1;
     }
   </style>
 </head>
@@ -34,15 +52,15 @@
       </p>
     </div>
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8 tracking-wide">Our Mission</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
+      <h2 class="section-title">Our Mission</h2>
+      <div class="custom-card rounded-xl p-8 border border-gray-200 shadow">
         <p class="text-lg text-gray-700">Pakistan Under Siege is dedicated to archiving and exposing human rights violations perpetrated by the military and unelected government since 2022. Our mission is to provide a transparent, accessible record for the world and empower those seeking justice.<br><br>
         <span class='font-bold text-red-700'>Warning:</span> Contributors and sources are at risk of harassment, abduction, or worse. All information is published at great personal risk. This site is not affiliated with any political party or foreign agency. Our only allegiance is to the truth.</p>
       </div>
     </section>
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8 tracking-wide">Documentation Process</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
+      <h2 class="section-title">Documentation Process</h2>
+      <div class="custom-card rounded-xl p-8 border border-gray-200 shadow">
         <ul class="list-disc pl-8 text-lg text-gray-700 space-y-2">
           <li>Collecting verified reports from reputable sources</li>
           <li>Organizing incidents by region, date, and type</li>
@@ -52,8 +70,8 @@
       </div>
     </section>
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8 tracking-wide">How You Can Help</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
+      <h2 class="section-title">How You Can Help</h2>
+      <div class="custom-card rounded-xl p-8 border border-gray-200 shadow">
         <ul class="list-disc pl-8 text-lg text-gray-700 space-y-2">
           <li>Share our website and reports</li>
           <li>Submit verified information</li>
@@ -62,8 +80,8 @@
       </div>
     </section>
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-green-700 mb-8 tracking-wide">Contact</h2>
-      <div class="bg-white rounded-xl p-8 border border-gray-200 shadow">
+      <h2 class="section-title">Contact</h2>
+      <div class="custom-card rounded-xl p-8 border border-gray-200 shadow">
         <p class="text-lg text-gray-700">For inquiries, contributions, or support, please email <a href="mailto:info@pakistanundersiege.org" class="text-green-700 underline hover:text-green-800">info@pakistanundersiege.org</a>.</p>
       </div>
     </section>
